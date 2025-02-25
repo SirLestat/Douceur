@@ -1,4 +1,10 @@
+import { useCart } from "../../context/CartContext";
+
 const Navbar = () => {
+  const { cart } = useCart();
+
+  const totalItems = cart.length;
+  const subtotal = cart.reduce((acc, item) => acc + item.price, 0);
   return (
     <div className="navbar bg-[#F5F6F3]/50 w-full text-black fixed z-50 backdrop-blur-sm top-0 inset-x-0">
       <div className="navbar-start">
@@ -79,7 +85,7 @@ const Navbar = () => {
                 />
               </svg>
               <span className="badge badge-sm indicator-item bg-[#8B9D83] text-white">
-                8
+                {totalItems}
               </span>
             </div>
           </div>
@@ -88,11 +94,13 @@ const Navbar = () => {
             className="card card-compact dropdown-content bg-[#F5F6F3] z-[1] mt-3 w-52 shadow border-2 border-[#8B9D83] rounded-2xl"
           >
             <div className="card-body">
-              <span className="text-lg font-bold text-[#000000]">8 Items</span>
-              <span className="text-[#000000]">Subtotal: $999</span>
+              <span className="text-lg font-bold text-[#000000]">
+                {totalItems} Productos
+              </span>
+              <span className="text-[#000000]">Subtotal: ${subtotal}</span>
               <div className="card-actions">
                 <button className="btn btn-block bg-[#8B9D83] text-white hover:bg-[#5D6D56]">
-                  View cart
+                  Ver Carrito
                 </button>
               </div>
             </div>
