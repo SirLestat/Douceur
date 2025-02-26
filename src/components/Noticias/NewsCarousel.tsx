@@ -5,31 +5,36 @@ const NewsCarousel: React.FC = () => {
   return (
     <div className="pt-16">
       <ScrollRevealWrapper>
-        <h2 className="text-black text-2xl font-bold pb-4">Noticias</h2>
-        <div className="carousel carousel-center rounded-box border-none pb-4">
+        <h2 className="text-black text-3xl font-bold pb-4 text-left">
+          Noticias
+        </h2>
+        <div className="flex overflow-x-auto space-x-4 pb-4">
           {newslist.map((news) => (
             <div
               key={news.id}
-              className="carousel-item relative border-none pr-4"
+              className="flex-shrink-0 w-[80%] sm:w-[45%] md:w-[30%] lg:w-[22%]"
             >
-              <div className="relative">
+              <div className="relative group">
                 <img
                   src={news.image}
-                  className="rounded-3xl "
+                  className="w-full h-auto rounded-3xl"
                   alt={news.imgdescription}
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-3xl "></div>
+                {/* Degradado y texto */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-3xl p-4 flex flex-col justify-end">
+                  <h2 className="text-white text-lg sm:text-xl font-semibold leading-tight absolute bottom-20">
+                    {news.title}
+                  </h2>
+                </div>
 
-                <h2 className="absolute text-left left-0 bottom-14 text-white text-lg font-sm p-4">
-                  {news.title}
-                </h2>
-
-                <div className="bg-[#F5F6F3] absolute right-0 bottom-0 rounded-br-2xl rounded-tl-[40px] rounded-tr-none rounded-bl-none border-none w-[16vw] h-[7.2vh]">
-                  <button className="btn absolute bottom-0 left-3 text-xl text-center flex rounded-none rounded-tl-3xl rounded-br-3xl bg-[#8B9D83]">
+                {/* Botón posicionado en la parte derecha */}
+                <div className="absolute bottom-4 right-4 ">
+                  <button className="btn bg-gray-200 rounded-full transition-all duration-300 transform hover:scale-110 px-[13px] ">
                     <img
-                      src="src/components/Noticias/assets/arrow2.png"
-                      alt="ir"
+                      src="src/components/Noticias/assets/arrow1.png"
+                      alt="icono de flecha"
+                      className="w-5 "
                     />
                   </button>
                 </div>
@@ -40,7 +45,7 @@ const NewsCarousel: React.FC = () => {
       </ScrollRevealWrapper>
 
       <ScrollRevealWrapper>
-        <button className="btn w-full rounded-full bg-[#8B9D83] text-white">
+        <button className="btn w-full rounded-full bg-[#8B9D83] text-white mt-6 py-3 px-6 shadow-lg hover:bg-[#6f7d5b] transition-all duration-300">
           Ver todas las noticias
         </button>
       </ScrollRevealWrapper>

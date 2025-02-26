@@ -4,15 +4,21 @@ const Footer = () => {
   return (
     <ScrollRevealWrapper>
       <div className="pt-16 pb-4">
-        <footer className="footer bg-base-300 text-base-content p-10 rounded-3xl grid grid-cols-2 ">
-          <div className="col-span-2 flex items-center">
+        <footer className="footer bg-base-300 text-base-content p-10 rounded-3xl grid grid-cols-2 md:flex md:justify-around ">
+          
+          
+          <div className="col-span-2 flex items-center flex-col md:items-start">
             <img
               src="src\assets\hoja2.png"
               alt="Logo hoja verde"
               className="w-[4vh] h-[4vh]"
             />
             <p className="text-black text-3xl font-bold">Douceur</p>
+            <p >Douceur Industries Ltd.
+            Providing reliable tech since 1992</p>
+            
           </div>
+          
           <nav>
             <h6 className="footer-title">Services</h6>
             <a className="link link-hover">Branding</a>
