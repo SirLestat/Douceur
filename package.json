@@ -12,17 +12,13 @@
   "dependencies": {
     "@types/aos": "^3.0.7",
     "aos": "^2.3.4",
-    "gsap": "^3.12.7",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "scrollreveal": "^4.0.9"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
-    "@types/locomotive-scroll": "^4.1.4",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
-    "@types/scrollreveal": "^0.0.11",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "daisyui": "^4.12.23",
