@@ -1,13 +1,16 @@
-
-
 const Blog = () => {
   return (
-    <div className="py-16 md:py-24 text-black md:grid md:grid-cols-2  md:gap-8" data-aos="fade-right" data-aos-delay="250">
+    <div
+      className="py-16 md:py-24 text-black md:grid md:grid-cols-2  md:gap-8"
+      data-aos="fade-right"
+      data-aos-offset={window.innerWidth < 768 ? 400 : 800}
+      data-aos-duration="1000"
+    >
       <div>
         <h2 className="text-3xl font-bold pb-4 md:text-4xl">
           Cuidado Natural, Belleza Auténtica
         </h2>
-        
+
         <img
           loading="lazy"
           src="src/components/Blog/assets/model1.png"
@@ -25,9 +28,7 @@ const Blog = () => {
             Descubre el poder de los ingredientes orgánicos para una piel
             radiante, saludable y en armonía con la naturaleza.
           </p>
-          <button className="btn2 ">
-            Leer blog
-          </button>
+          <button className="btn2 ">Leer blog</button>
         </div>
       </div>
     </div>

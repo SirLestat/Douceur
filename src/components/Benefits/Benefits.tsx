@@ -29,16 +29,18 @@ const Benefits = () => {
           alt="Crema facial"
           className="col-span-2 row-start-2 rounded-3xl"
           data-aos="fade-up"
-          data-aos-delay="150"
+          data-aos-duration="1000"
           loading="lazy"
+          data-aos-offset={window.innerWidth < 768 ? 200 : 700}
         />
         <img
           src="src\components\Benefits\assets\demo-1.png"
           alt="Resultado de uso de crema facial"
           className="col-span-2 row-start-1 row-span-2 bg-cover rounded-3xl"
           data-aos="fade-down"
-          data-aos-delay="100"
+          data-aos-duration="1000"
           loading="lazy"
+          data-aos-offset={window.innerWidth < 768 ? 150 : 600}
         />
       </div>
 
@@ -52,7 +54,7 @@ const Benefits = () => {
           <div
             className="border-4 border-[#697B60] bg-gray-00 rounded-3xl p-4"
             data-aos="zoom-in"
-            data-aos-delay="300"
+            data-aos-offset={window.innerWidth < 768 ? 150 : 800}
           >
             <img
               src="src\components\Benefits\assets\benefit2.2.png"
@@ -70,7 +72,7 @@ const Benefits = () => {
           <div
             className="border-4 border-[#697B60] rounded-3xl p-4"
             data-aos="zoom-in"
-            data-aos-delay="350"
+            data-aos-offset={window.innerWidth < 768 ? 200 : 1000}
           >
             <img
               src="src\components\Benefits\assets\benefit1.2.png"
@@ -88,7 +90,7 @@ const Benefits = () => {
           <div
             className="border-4 border-[#697B60] rounded-3xl p-4"
             data-aos="zoom-in"
-            data-aos-delay="400"
+            data-aos-offset={window.innerWidth < 768 ? 250 : 1200}
           >
             <img
               src="src\components\Benefits\assets\benefit3.3.png"
