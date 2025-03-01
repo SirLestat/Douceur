@@ -11,7 +11,12 @@ const Carousel: React.FC<CarouselProps> = ({ products }) => {
     <div className="mt-4">
       <div className="carousel carousel-center bg-[rgba(139,157,131,0.2)] rounded-box max-w-full space-x-4 p-4">
         {products.map((product) => (
-          <div key={product.id} className="carousel-item flex flex-col">
+          <div
+            key={product.id}
+            className="carousel-item flex flex-col"
+            data-aos="flip-left"
+            data-aos-delay="350"
+          >
             <p className="text-lg text-black font-medium">{product.name}</p>
             <p className="text-sm text-neutral-500 pb-4">
               $ {product.price} MXN
@@ -22,6 +27,7 @@ const Carousel: React.FC<CarouselProps> = ({ products }) => {
                 src={product.image}
                 className="rounded-box row-span-2 "
                 alt={product.name}
+                loading="lazy"
               />
 
               <button

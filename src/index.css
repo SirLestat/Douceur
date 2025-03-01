@@ -22,11 +22,11 @@ body {
 }
 a {
   font-weight: 500;
-  color: #8b9d83;
+  color: #6B7B64;
   text-decoration: inherit;
 }
 a:hover {
-  color: #8b9d83;
+  color: #8B9D83;
 }
 
 h1 {
@@ -34,19 +34,16 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 40px;
-  border: 2px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #8b9d83;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #5d6d56;
+@layer components {
+  .btn2 {
+    @apply bg-[#697B60] text-lg text-white font-bold py-3 px-8 rounded-full transition-transform duration-200 ease-in-out;
+  }
+  .btn2:hover {
+    @apply bg-[#5A6B51];
+  }
+  .btn2:active {
+    @apply scale-95;
+  }
 }
 
 .hide-scrollbar::-webkit-scrollbar {

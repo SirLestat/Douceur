@@ -3,7 +3,6 @@ import { useState } from "react";
 import { products } from "./Products";
 import HorizontalScroll from "./HorizontalScroll";
 import Carousel from "./Carousel";
-import ScrollRevealWrapper from "../ScrollRevealWrapper";
 
 const ProductCarousel = () => {
   // Estado para guardar la categoría seleccionada
@@ -29,16 +28,9 @@ const ProductCarousel = () => {
 
   return (
     <div>
-      <ScrollRevealWrapper>
-        <HorizontalScroll
-          buttons={buttons}
-          selectedCategory={selectedCategory}
-        />
-      </ScrollRevealWrapper>
+      <HorizontalScroll buttons={buttons} />
 
-      <ScrollRevealWrapper >
-        <Carousel products={filteredProducts} />
-      </ScrollRevealWrapper>
+      <Carousel products={filteredProducts} />
     </div>
   );
 };

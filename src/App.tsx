@@ -6,8 +6,14 @@ import Navbar from "./components/Navbar/Navbar";
 import NewsCarousel from "./components/Noticias/NewsCarousel";
 import Products from "./components/Products/ProductsCarousel";
 import { CartProvider } from "./context/CartContext";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <CartProvider>
       <div className="w-full min-h-screen pt-20">

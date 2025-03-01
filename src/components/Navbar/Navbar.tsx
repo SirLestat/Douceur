@@ -27,7 +27,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-white rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-md dropdown-content bg-white rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             <li>
               <a>Homepage</a>
@@ -43,9 +43,10 @@ const Navbar = () => {
       </div>
       <div className="navbar-center">
         <img
-          src="src\assets\hoja2.png"
+          src="src\assets\hoja3.png"
           alt="Logo hoja verde"
           className="w-[4vh] h-[4vh]"
+          loading="lazy"
         />
         <a className="btn btn-ghost text-2xl pl-2">Douceur</a>
       </div>
