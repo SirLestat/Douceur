@@ -7,19 +7,33 @@ interface ButtonConfig {
 
 interface HorizontalScrollProps {
   buttons: ButtonConfig[];
+  selectedCategory: string | null; // Recibe la categoría seleccionada
 }
 
-const HorizontalScroll: React.FC<HorizontalScrollProps> = ({ buttons }) => {
+const HorizontalScroll: React.FC<HorizontalScrollProps> = ({
+  buttons,
+  selectedCategory,
+}) => {
   return (
     <div>
       <p className="text-black font-bold text-3xl">Los más vendidos</p>
       <div className="overflow-x-auto scroll-container whitespace-nowrap pt-4 hide-scrollbar">
-        <div className="inline-flex gap-4  ">
+        <div className="inline-flex gap-4">
           {buttons.map((button, index) => (
             <button
               key={index}
               onClick={button.onClick}
-              className="btn2 font-normal text-sm"
+              className={`
+            btn2 font-normal text-sm
+            transform transition-all duration-300
+            hover:-translate-y-1 hover:shadow-lg
+            active:translate-y-0
+            ${
+              selectedCategory === button.category
+                ? "-translate-y-1 shadow-lg ring-2 ring-[#8B9D83]"
+                : "translate-y-0 shadow-md"
+            }
+          `}
             >
               {button.label}
             </button>

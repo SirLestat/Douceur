@@ -16,7 +16,7 @@ const Carousel: React.FC<CarouselProps> = ({ products }) => {
             className="carousel-item flex flex-col"
             data-aos="flip-left"
             data-aos-duration="850"
-            data-aos-offset={window.innerWidth < 768 ? 300 : 900}
+            data-aos-offset={window.innerWidth < 768 ? 300 : 700}
           >
             <p className="text-lg text-black font-medium">{product.name}</p>
             <p className="text-sm text-neutral-500 pb-4">

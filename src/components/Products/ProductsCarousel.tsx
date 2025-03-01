@@ -4,6 +4,7 @@ import { products } from "./Products";
 import HorizontalScroll from "./HorizontalScroll";
 import Carousel from "./Carousel";
 
+
 const ProductCarousel = () => {
   // Estado para guardar la categoría seleccionada
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -28,9 +29,16 @@ const ProductCarousel = () => {
 
   return (
     <div>
-      <HorizontalScroll buttons={buttons} />
+      
+        <HorizontalScroll
+          buttons={buttons}
+          selectedCategory={selectedCategory}
+        />
+      
 
-      <Carousel products={filteredProducts} />
+      
+        <Carousel products={filteredProducts} />
+      
     </div>
   );
 };

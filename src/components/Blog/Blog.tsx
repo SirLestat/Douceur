@@ -3,8 +3,9 @@ const Blog = () => {
     <div
       className="py-16 md:py-24 text-black md:grid md:grid-cols-2  md:gap-8"
       data-aos="fade-right"
-      data-aos-offset={window.innerWidth < 768 ? 400 : 800}
+      data-aos-offset={window.innerWidth < 768 ? 400 : 700}
       data-aos-duration="1000"
+      data-aos-once="true"
     >
       <div>
         <h2 className="text-3xl font-bold pb-4 md:text-4xl">
