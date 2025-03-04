@@ -1,6 +1,6 @@
 const Benefits = () => {
   return (
-    <div className=" py-16 md:py-24 min-h-[90vh] text-black">
+    <div className="py-16 md:py-36 min-h-[90vh] w-full text-black mx-auto  max-w-[150vh]">
       {/* Contenido principal con Flex */}
       <div
         className="flex flex-col items-center text-center sm:text-left"
@@ -23,28 +23,34 @@ const Benefits = () => {
 
       {/* Grid para  imágenes */}
 
-      <div className="grid grid-cols-4 grid-rows-1 gap-4 md:gap-8">
+      <div className="grid grid-cols-2 grid-rows-4 gap-4 md:gap-8 w-full h-[60vh]">
         <img
-          src="src\components\Benefits\assets\product-1.png"
-          alt="Crema facial"
-          className="col-span-2 row-start-2 rounded-3xl"
-          data-aos="fade-up"
-          data-aos-duration="1000"
+          src="src\components\Benefits\assets\organic4.jpg"
+          alt="ingredientes naturales organicos"
+          className="rounded-3xl w-full h-full object-cover col-start-1 col-span-1 row-span-2 "
+          data-aos="fade-down"
           loading="lazy"
-          data-aos-offset={window.innerWidth < 768 ? 200 : 700}
+          data-aos-offset={window.innerWidth < 768 ? 150 : 400}
+        />
+        <img
+          src="src\components\Benefits\assets\organic.jpg"
+          alt="Crema facial"
+          className="col-span-1 row-span-2 row-start-1 col-start-1 rounded-3xl w-full h-full object-cover"
+          data-aos="fade-up"
+          loading="lazy"
+          data-aos-offset={window.innerWidth < 768 ? 150 : 400}
         />
         <img
           src="src\components\Benefits\assets\demo-1.png"
           alt="Resultado de uso de crema facial"
-          className="col-span-2 row-start-1 row-span-2 bg-cover rounded-3xl"
+          className="col-span-2 row-span-4 row-start-1 col-start-2 rounded-3xl w-full h-full object-cover"
           data-aos="fade-down"
-          data-aos-duration="1000"
           loading="lazy"
           data-aos-offset={window.innerWidth < 768 ? 150 : 600}
         />
       </div>
 
-      <div className="flex flex-col items-center mt-8">
+      <div className="flex flex-col items-center mt-8 ">
         <p className="font-bold text-lg mb-8 md:text-xl lg:text-2xl">
           Nuestros productos son 100% naturales, respetuosos con el medio
           ambiente y diseñados para nutrir profundamente.
@@ -54,7 +60,7 @@ const Benefits = () => {
           <div
             className="border-4 border-[#697B60] bg-gray-00 rounded-3xl p-4"
             data-aos="zoom-in"
-            data-aos-offset={window.innerWidth < 768 ? 150 : 800}
+            data-aos-offset={window.innerWidth < 768 ? 150 : 400}
           >
             <img
               src="src\components\Benefits\assets\benefit2.2.png"
@@ -72,7 +78,7 @@ const Benefits = () => {
           <div
             className="border-4 border-[#697B60] rounded-3xl p-4"
             data-aos="zoom-in"
-            data-aos-offset={window.innerWidth < 768 ? 200 : 1000}
+            data-aos-offset={window.innerWidth < 768 ? 200 : 600}
           >
             <img
               src="src\components\Benefits\assets\benefit1.2.png"
@@ -83,14 +89,14 @@ const Benefits = () => {
               Packaging sostenible
             </h3>
             <p className="text-sm md:text-base lg:text-lg">
-              Materiales 100% reciclables y biodegradables
+              Materiales reciclables y biodegradables
             </p>
           </div>
 
           <div
             className="border-4 border-[#697B60] rounded-3xl p-4"
             data-aos="zoom-in"
-            data-aos-offset={window.innerWidth < 768 ? 250 : 1200}
+            data-aos-offset={window.innerWidth < 768 ? 250 : 800}
           >
             <img
               src="src\components\Benefits\assets\benefit3.3.png"

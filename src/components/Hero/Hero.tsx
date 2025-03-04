@@ -1,5 +1,3 @@
-
-
 const Hero = () => {
   return (
     <section
@@ -8,16 +6,16 @@ const Hero = () => {
       data-aos-duration="1500"
     >
       {/* Grid en lg para organizar contenido */}
-      <div className="hero min-h-[74vh] md:min-h-[90vh] lg:w-full bg-cover bg-center rounded-3xl relative lg:grid lg:grid-cols-2 lg:items-center ">
+      <div className="hero min-h-[74vh] md:h-[100vh] md:w-12/12 place-items-center rounded-3xl relative md:grid md:grid-cols-2 lg:items-center ">
         {/* Texto a la izquierda en lg */}
         <div
           className="hero-content absolute bottom-0 left-0 w-full p-6 
                           bg-gradient-to-t from-black/80 to-transparent rounded-b-3xl 
                           md:relative md:bg-none md:p-12 lg:col-start-1"
         >
-          <div className="text-white md:text-black">
-            <h1 className="text-5xl font-bold md:text-6xl">Belleza Natural</h1>
-            <p className="py-4 sm:text-xl">
+          <div className="text-white md:text-white ">
+            <h1 className="text-5xl font-bold md:text-8xl">Belleza Natural</h1>
+            <p className="py-4 text-lg md:text-3xl ">
               Descubre nuestra línea de cosméticos orgánicos certificados,
               elaborados con ingredientes naturales para el cuidado consciente
               de tu piel.
@@ -31,11 +29,12 @@ const Hero = () => {
         </div>
 
         {/* Imagen a la derecha en md+ */}
+        
         <img
-          src="./src/components/hero/assets/hero-bg8.png"
+          src="./src/components/hero/assets/hero8.png"
           alt="Portada mostrando una mujer de belleza natural usando cosméticos orgánicos"
           className="object-cover w-full h-full md:max-h-screen rounded-3xl 
-                        md:w-full md:h-full md:col-start-2 "
+                        md:w-12/12 md:h-[95vh]  col-span-2 col-start-1 md:object-top"
         />
       </div>
 

@@ -6,9 +6,11 @@ const Navbar = () => {
   const totalItems = cart.length;
   const subtotal = cart.reduce((acc, item) => acc + item.price, 0);
   return (
-    <div className="navbar bg-[#F5F6F3]/50 w-full text-black fixed z-50 backdrop-blur-sm top-0 inset-x-0">
+    <div className="navbar bg-[#F5F6F3]/50 md:bg-transparent w-full md:w-11/12 text-black fixed md:absolute z-50 backdrop-blur-sm md:backdrop-blur-none top-0 md:top-20 md:left-1/2 md:-translate-x-1/2 mx-auto">
+      {/* Menú móvil y marca */}
       <div className="navbar-start">
-        <div className="dropdown">
+        {/* Dropdown solo en móvil */}
+        <div className="dropdown md:hidden">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -40,21 +42,40 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+
+        {/* Marca - Visible siempre */}
+        <div className="flex items-center">
+          <a className="btn btn-ghost text-2xl md:text-4xl pl-2 hover:bg-transparent md:text-white">
+            <img
+              src="src\assets\hoja3.png"
+              alt="Logo hoja verde"
+              className="w-[4vh] h-[4vh] "
+              loading="lazy"
+            />
+            Douceur
+          </a>
+        </div>
       </div>
-      <div className="navbar-center">
-        <img
-          src="src\assets\hoja3.png"
-          alt="Logo hoja verde"
-          className="w-[4vh] h-[4vh]"
-          loading="lazy"
-        />
-        <a className="btn btn-ghost text-2xl pl-2">Douceur</a>
-      </div>
-      <div className="navbar-end">
+
+      {/* Menú desktop y iconos */}
+      <div className="navbar-end flex">
+        {/* Links visibles solo en desktop */}
+        <div className="hidden md:flex items-center gap-x-2 pr-8 text-2xl font-semibold text-white">
+          <a className="hover:bg-black/20 px-4 py-2 rounded-full cursor-pointer">
+            Homepage
+          </a>
+          <a className="hover:bg-black/20 px-4 py-2 rounded-full cursor-pointer">
+            Portfolio
+          </a>
+          <a className="hover:bg-black/20 px-4 py-2 rounded-full cursor-pointer">
+            About
+          </a>
+        </div>
+
         <button className="btn btn-ghost btn-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            className="h-6 w-6 md:text-white"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -73,10 +94,10 @@ const Navbar = () => {
             <div className="indicator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-5 w-5 md:text-white"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="#000000"
+                stroke="currentColor"
               >
                 <path
                   strokeLinecap="round"

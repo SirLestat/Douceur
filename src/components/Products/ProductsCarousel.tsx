@@ -28,7 +28,7 @@ const ProductCarousel = () => {
   }));
 
   return (
-    <div>
+    <div className="max-w-[150vh] mx-auto pb-8">
       
         <HorizontalScroll
           buttons={buttons}

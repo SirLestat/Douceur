@@ -1,7 +1,7 @@
 const Blog = () => {
   return (
     <div
-      className="py-16 md:py-24 text-black md:grid md:grid-cols-2  md:gap-8"
+      className="py-16 md:py-36 text-black md:grid md:grid-cols-2  md:gap-8 max-w-[150vh] mx-auto"
       data-aos="fade-right"
       data-aos-offset={window.innerWidth < 768 ? 400 : 700}
       data-aos-duration="1000"
@@ -11,13 +11,18 @@ const Blog = () => {
         <h2 className="text-3xl font-bold pb-4 md:text-4xl">
           Cuidado Natural, Belleza Auténtica
         </h2>
-
-        <img
+<div className="">
+  
+  <img
           loading="lazy"
-          src="src/components/Blog/assets/model1.png"
-          alt="Modelo rubia demostrando cuidado natural"
-          className="w-full rounded-3xl"
+          src="src\components\Blog\assets\nature2.jpg"
+          alt="Modelo en la naturaleza con flor en el cabello"
+          className="w-full  rounded-br-full rounded-tl-full object-cover row-start-2 col-start-2"
         />
+  
+
+</div>
+        
       </div>
 
       <div>

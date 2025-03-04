@@ -20,14 +20,7 @@ body {
   margin: 0;
   padding: 0;
 }
-a {
-  font-weight: 500;
-  color: #6B7B64;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #8B9D83;
-}
+
 
 h1 {
   font-size: 3.2em;
