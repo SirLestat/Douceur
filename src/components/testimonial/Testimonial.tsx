@@ -104,7 +104,7 @@ export default function TestimonialCarousel() {
   }
 
   return (
-    <div className="w-full max-w-[150vh] mx-auto relative px-4">
+    <div className="w-full max-w-[150vh] mx-auto relative px-4 pt-6">
       {/* Carousel container */}
       <div className="overflow-hidden py-8">
         <p className="text-black  text-3xl font-semibold pb-4">Lo que dicen nuestros clientes</p>
@@ -137,28 +137,29 @@ export default function TestimonialCarousel() {
       {/* Navigation buttons */}
       <button
         onClick={prevSlide}
-        className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#5D6D56] hover:bg-[#697B60] text-white rounded-full p-2 shadow-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5D6D56] z-10"
+        className="btn2 absolute -left-1 top-[160px] -translate-y-1/2 bg-[#009688] hover:bg-[#00776b] text-white rounded-full p-2 shadow-md transition-colors duration-300 focus:outline-none z-10 hidden md:flex"
         aria-label="Testimonio anterior"
       >
-       
+       <img src="src\components\testimonial\assets\leftarrow.png" alt="flecha izquierda" className="w-6" />
       </button>
 
       <button
+
         onClick={nextSlide}
-        className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#5D6D56] hover:bg-[#697B60] text-white rounded-full p-2 shadow-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5D6D56] z-10"
+        className="btn2 absolute -right-1 top-[160px] -translate-y-1/2 bg-[#009688] hover:bg-[#00776b] text-white rounded-full p-2 shadow-md transition-colors duration-300 focus:outline-none z-10 hidden md:flex"
         aria-label="Siguiente testimonio"
       >
-        
+        <img src="src\components\testimonial\assets\rightarrow.png" alt="flecha derecha" className="w-6" />
       </button>
 
       {/* Pagination indicators */}
-      <div className="flex justify-center mt-4 gap-2">
+      <div className="flex justify-center gap-2">
         {Array.from({ length: totalSlides }).map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 ${
-              currentIndex === index ? "bg-[#5D6D56]" : "bg-gray-300"
+              currentIndex === index ? "bg-[#009688]" : "bg-gray-300"
             }`}
             aria-label={`Ir al grupo de testimonios ${index + 1}`}
           />
@@ -177,7 +178,7 @@ function TestimonialCard({ testimonial }: { testimonial: TestimonialProps }) {
         {/* Testimonial text */}
         <div className="mb-4 relative">
           <svg
-            className="absolute -top-2 -left-2 w-6 h-6 text-[#5D6D56] opacity-30"
+            className="absolute -top-2 -left-3 w-6 h-6 text-[#009688] opacity-40"
             fill="currentColor"
             viewBox="0 0 24 24"
           >

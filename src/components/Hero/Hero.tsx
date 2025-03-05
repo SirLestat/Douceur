@@ -1,6 +1,7 @@
 const Hero = () => {
   return (
-    <section
+    <section 
+    className="p-4 md:px-8"
       aria-label="Sección principal - Portada de modelo"
       data-aos="fade-down"
       data-aos-duration="1500"
@@ -22,7 +23,7 @@ const Hero = () => {
             </p>
 
             {/* Botón visible solo en md+ */}
-            <button className="btn2 hidden md:flex items-center justify-center  min-w-[200px] h-[56px]  md:text-xl bg-[#697B60] text-white  mt-4">
+            <button className="btn2 hidden md:flex items-center justify-center  min-w-[200px] h-[56px]  md:text-xl text-white  mt-4">
               Compra ahora
             </button>
           </div>
@@ -39,7 +40,7 @@ const Hero = () => {
       </div>
 
       {/* Botón visible solo en sm */}
-      <button className="md:hidden btn rounded-full w-full bg-[#697B60] text-white  mt-4 text-lg items">
+      <button className="md:hidden btn rounded-full w-full bg-[#009688] text-white  mt-4 text-lg items">
         Compra ahora
       </button>
     </section>

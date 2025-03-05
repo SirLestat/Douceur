@@ -25,6 +25,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const addToCart = (product: Product) => {
     setCart([...cart, product]);
+    
   };
 
   const removeToCart = (productId: number) => {

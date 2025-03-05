@@ -3,6 +3,7 @@ import { useState } from "react";
 import { products } from "./Products";
 import HorizontalScroll from "./HorizontalScroll";
 import Carousel from "./Carousel";
+import TestimonialCarousel from "../testimonial/Testimonial";
 
 
 const ProductCarousel = () => {
@@ -28,17 +29,16 @@ const ProductCarousel = () => {
   }));
 
   return (
-    <div className="max-w-[150vh] mx-auto pb-8">
-      
+    <div className="bg-[#f5f8f5] w-full p-0">
+      <div className="max-w-[150vh] mx-auto pb-8 ">
         <HorizontalScroll
           buttons={buttons}
           selectedCategory={selectedCategory}
         />
-      
 
-      
         <Carousel products={filteredProducts} />
-      
+        <TestimonialCarousel/>
+      </div>
     </div>
   );
 };

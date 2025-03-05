@@ -9,7 +9,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #f5f6f3;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -29,10 +29,10 @@ h1 {
 
 @layer components {
   .btn2 {
-    @apply bg-[#697B60] text-lg text-white font-bold py-3 px-8 rounded-full transition-transform duration-200 ease-in-out;
+    @apply bg-[#009688] text-lg text-white font-bold py-3 px-8 rounded-full transition-transform duration-200 ease-in-out;
   }
   .btn2:hover {
-    @apply bg-[#5A6B51];
+    @apply bg-[#00776b];
   }
   .btn2:active {
     @apply scale-95;

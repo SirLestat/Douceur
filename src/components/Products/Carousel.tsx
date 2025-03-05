@@ -8,8 +8,8 @@ interface CarouselProps {
 const Carousel: React.FC<CarouselProps> = ({ products }) => {
   const { addToCart } = useCart();
   return (
-    <div className="mt-4">
-      <div className="carousel carousel-center bg-[rgba(139,157,131,0.2)] rounded-box max-w-full space-x-4 p-4">
+    <div className="mt-4 px-6 md:px-0">
+      <div className="carousel carousel-center  rounded-box max-w-full space-x-4">
         {products.map((product) => (
           <div
             key={product.id}
@@ -32,7 +32,7 @@ const Carousel: React.FC<CarouselProps> = ({ products }) => {
               />
 
               <button
-                onClick={() => addToCart(product)}
+                onClick={() => addToCart(product) }
                 className="btn absolute  top-3 right-3  btn-circle "
               >
                 <img

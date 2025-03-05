@@ -1,12 +1,12 @@
 const Benefits = () => {
   return (
-    <div className="py-16 md:py-36 min-h-[90vh] w-full text-black mx-auto  max-w-[150vh]">
+    <div className="py-16 px-6 md:px-0 md:py-36 min-h-[90vh] w-full text-black mx-auto  max-w-[150vh]">
       {/* Contenido principal con Flex */}
       <div
         className="flex flex-col items-center text-center sm:text-left"
         data-aos="fade-up"
       >
-        <p className="text-4xl font-bold mb-8 md:text-5xl lg:text-6xl">
+        <p className="text-4xl font-bold mb-8 md:text-5xl lg:text-6xl text-[#111827]">
           ¿Por qué elegir Douceur?
         </p>
 
@@ -14,7 +14,7 @@ const Benefits = () => {
           <p className="text-2xl font-medium md:text-3xl lg:text-4xl">
             Ingredientes <strong>orgánicos</strong>
           </p>
-          <p className="mt-4 mb-8 text-base md:text-lg lg:text-xl">
+          <p className="mt-4 mb-8 text-lg md:text-xl ">
             Descubre nuestras fórmulas enriquecidas con extractos botánicos y
             aceites esenciales para una piel radiante y saludable.
           </p>
@@ -30,7 +30,7 @@ const Benefits = () => {
           className="rounded-3xl w-full h-full object-cover col-start-1 col-span-1 row-span-2 "
           data-aos="fade-down"
           loading="lazy"
-          data-aos-offset={window.innerWidth < 768 ? 150 : 400}
+          data-aos-offset={window.innerWidth < 768 ? 150 : 300}
         />
         <img
           src="src\components\Benefits\assets\organic.jpg"
@@ -38,7 +38,7 @@ const Benefits = () => {
           className="col-span-1 row-span-2 row-start-1 col-start-1 rounded-3xl w-full h-full object-cover"
           data-aos="fade-up"
           loading="lazy"
-          data-aos-offset={window.innerWidth < 768 ? 150 : 400}
+          data-aos-offset={window.innerWidth < 768 ? 150 : 300}
         />
         <img
           src="src\components\Benefits\assets\demo-1.png"
@@ -46,7 +46,7 @@ const Benefits = () => {
           className="col-span-2 row-span-4 row-start-1 col-start-2 rounded-3xl w-full h-full object-cover"
           data-aos="fade-down"
           loading="lazy"
-          data-aos-offset={window.innerWidth < 768 ? 150 : 600}
+          data-aos-offset={window.innerWidth < 768 ? 150 : 400}
         />
       </div>
 
@@ -58,56 +58,81 @@ const Benefits = () => {
 
         <div className="flex flex-col gap-y-4 md:flex-row md:gap-6 md:w-full md:justify-between">
           <div
-            className="border-4 border-[#697B60] bg-gray-00 rounded-3xl p-4"
+            className="flex flex-col justify-center items-center text-center"
             data-aos="zoom-in"
             data-aos-offset={window.innerWidth < 768 ? 150 : 400}
           >
-            <img
-              src="src\components\Benefits\assets\benefit2.2.png"
-              alt="Pureza garantizada"
-              loading="lazy"
-            />
-            <h3 className="font-medium pb-1 text-md md:text-lg lg:text-xl">
+            <div className="bg-[#e6f0e6] rounded-full w-20 h-20 items-center justify-center flex">
+              <img
+                src="src\components\Benefits\assets\benefit2.2.png"
+                alt="Sin parabenos"
+                loading="lazy"
+              />
+            </div>
+
+            <h3 className="font-bold pb-1 text-xl md:text-lg lg:text-xl text-[#1e6e1e] pt-4">
               Pureza garantizada
             </h3>
-            <p className="text-sm md:text-base lg:text-lg">
-              Sin parabenos, sulfatos o siliconas
+            <p className="text-lg md:text-base lg:text-lg">
+              Sin parabenos, sulfatos o siliconas que puedan irritar tu piel o
+              dañar el medio ambiente.
+            </p>
+            <hr className="bg-[#33850A] my-6 w-32 h-[1px]" />
+            <p className="text-[#2e8b57] font-semibold text-md">
+              100% libre de tóxicos
             </p>
           </div>
 
           <div
-            className="border-4 border-[#697B60] rounded-3xl p-4"
+            className="flex flex-col justify-center items-center py-4 text-center"
             data-aos="zoom-in"
             data-aos-offset={window.innerWidth < 768 ? 200 : 600}
           >
-            <img
-              src="src\components\Benefits\assets\benefit1.2.png"
-              alt="Packaging sostenible"
-              loading="lazy"
-            />
-            <h3 className="font-medium pb-1 text-md md:text-lg lg:text-xl">
+            <div className="bg-[#e6f0e6] rounded-full w-20 h-20 items-center justify-center flex">
+              <img
+                src="src\components\Benefits\assets\benefit1.2.png"
+                alt="Packaging sostenible"
+                loading="lazy"
+              />
+            </div>
+
+            <h3 className="font-bold pb-1 text-xl md:text-lg lg:text-xl text-[#1e6e1e] pt-4">
               Packaging sostenible
             </h3>
-            <p className="text-sm md:text-base lg:text-lg">
-              Materiales reciclables y biodegradables
+            <p className="text-lg md:text-base lg:text-lg">
+              Materiales reciclables y biodegradables que minimizan nuestro
+              impacto en el planeta.
+            </p>
+            <hr className="bg-[#33850A] my-6 w-32 h-[1px]" />
+
+            <p className="text-[#2e8b57] font-semibold text-md">
+              Compromiso ecológico
             </p>
           </div>
 
           <div
-            className="border-4 border-[#697B60] rounded-3xl p-4"
+            className="flex flex-col justify-center items-center text-center"
             data-aos="zoom-in"
             data-aos-offset={window.innerWidth < 768 ? 250 : 800}
           >
-            <img
-              src="src\components\Benefits\assets\benefit3.3.png"
-              alt="Cruelty-Free"
-              loading="lazy"
-            />
-            <h3 className="font-medium pb-1 text-md md:text-lg lg:text-xl">
+            <div className="bg-[#e6f0e6] rounded-full w-20 h-20 flex items-center justify-center">
+              <img
+                src="src\components\Benefits\assets\benefit3.3.png"
+                alt="Cruelty-Free"
+                loading="lazy"
+              />
+            </div>
+
+            <h3 className="font-bold pb-1 text-xl md:text-lg lg:text-xl text-[#1e6e1e] pt-4">
               Cruelty-Free
             </h3>
-            <p className="text-sm md:text-base lg:text-lg">
-              Productos 100% veganos y libres de crueldad.
+            <p className="text-lg md:text-base lg:text-lg">
+              Productos 100% veganos y libres de crueldad, respetando a todos
+              los seres vivos.
+            </p>
+            <hr className="bg-[#33850A] my-6 w-32 h-[1px]" />
+            <p className="text-[#2e8b57] font-semibold text-md">
+              Certificación Leaping Bunny
             </p>
           </div>
         </div>
