@@ -1,6 +1,6 @@
 const Benefits = () => {
   return (
-    <div className="container mx-auto px-6 py-12 text-black sm:pb-32">
+    <div className="container mx-auto px-6 py-12 text-black sm:pb-16">
       {/* Contenido principal con Flex */}
       <div
         className="flex flex-col items-center text-center sm:text-left"

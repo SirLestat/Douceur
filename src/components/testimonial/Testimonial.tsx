@@ -104,7 +104,7 @@ export default function TestimonialCarousel() {
   }
 
   return (
-    <div className="w-full max-w-[150vh] mx-auto relative pt-6">
+    <div className="w-full max-w-[150vh] mx-auto relative pt-6 sm:pb-16 pb-12">
       {/* Carousel container */}
       <div className="overflow-hidden py-8">
         <p className="text-black  text-3xl font-semibold pb-4">Lo que dicen nuestros clientes</p>

@@ -3,16 +3,16 @@ const Blog = () => {
     <div className="relative">
       {/* Imagen de fondo solo para esta sección */}
       <div
-        className="absolute inset-0 w-full h-[50vh] top-28 bg-cover bg-center bg-no-repeat z-[-1]"
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat z-[-1]"
         style={{
-          backgroundImage: "url('src/components/Blog/assets/nature3.jpg')",
+          backgroundImage: "url('src/components/Blog/assets/nature9.jpg')",
           backgroundAttachment: "fixed",
         }}
       ></div>
 
       {/* Contenido del Blog */}
       <div
-        className="py-16 md:py-36 text-black md:grid md:grid-cols-2 container mx-auto px-6 relative z-10"
+        className="py-16  text-black md:grid md:grid-cols-2 container mx-auto px-6 relative z-10"
         data-aos="fade-right"
         data-aos-offset={window.innerWidth < 768 ? 400 : 700}
         data-aos-duration="1000"
@@ -26,9 +26,9 @@ const Blog = () => {
           <div>
             <img
               loading="lazy"
-              src="src/components/Blog/assets/nature2.jpg"
+              src="src/components/Blog/assets/nature1.jpg"
               alt="Modelo en la naturaleza con flor en el cabello"
-              className="w-full rounded-br-full rounded-tl-full object-cover row-start-2 col-start-2"
+              className="w-full rounded-br-full rounded-tl-full object-contain row-start-2 col-start-2"
             />
           </div>
         </div>
