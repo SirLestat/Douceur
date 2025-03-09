@@ -1,17 +1,17 @@
 const Benefits = () => {
   return (
-    <div className="py-16 px-6 md:px-0 md:py-36 min-h-[90vh] w-full text-black mx-auto  max-w-[150vh]">
+    <div className="container mx-auto px-6 py-12 text-black sm:pb-32">
       {/* Contenido principal con Flex */}
       <div
         className="flex flex-col items-center text-center sm:text-left"
         data-aos="fade-up"
       >
-        <p className="text-4xl font-bold mb-8 md:text-5xl lg:text-6xl text-[#111827]">
+        <p className="text-4xl font-bold mb-8 md:text-5xl lg:text-6xl text-[#2E6B34]">
           ¿Por qué elegir Douceur?
         </p>
 
         <div className="w-full max-w-full text-left">
-          <p className="text-2xl font-medium md:text-3xl lg:text-4xl">
+          <p className="text-2xl font-medium md:text-3xl lg:text-4xl text-[#5D534B]">
             Ingredientes <strong>orgánicos</strong>
           </p>
           <p className="mt-4 mb-8 text-lg md:text-xl ">
@@ -50,8 +50,8 @@ const Benefits = () => {
         />
       </div>
 
-      <div className="flex flex-col items-center mt-8 ">
-        <p className="font-bold text-lg mb-8 md:text-xl lg:text-2xl">
+      <div className="flex flex-col items-center sm:pt-16 pt-8">
+        <p className="font-bold text-xl mb-8 md:text-xl lg:text-2xl text-[#5D534B]">
           Nuestros productos son 100% naturales, respetuosos con el medio
           ambiente y diseñados para nutrir profundamente.
         </p>
@@ -60,7 +60,7 @@ const Benefits = () => {
           <div
             className="flex flex-col justify-center items-center text-center"
             data-aos="zoom-in"
-            data-aos-offset={window.innerWidth < 768 ? 150 : 400}
+            data-aos-offset={window.innerWidth < 768 ? 150 : 300}
           >
             <div className="bg-[#e6f0e6] rounded-full w-20 h-20 items-center justify-center flex">
               <img
@@ -70,10 +70,10 @@ const Benefits = () => {
               />
             </div>
 
-            <h3 className="font-bold pb-1 text-xl md:text-lg lg:text-xl text-[#1e6e1e] pt-4">
+            <h3 className="font-bold pb-1 text-xl md:text-lg lg:text-xl pt-4 text-[#1e6e1e]">
               Pureza garantizada
             </h3>
-            <p className="text-lg md:text-base lg:text-lg">
+            <p className="text-lg  lg:text-lg">
               Sin parabenos, sulfatos o siliconas que puedan irritar tu piel o
               dañar el medio ambiente.
             </p>
@@ -86,7 +86,7 @@ const Benefits = () => {
           <div
             className="flex flex-col justify-center items-center py-4 text-center"
             data-aos="zoom-in"
-            data-aos-offset={window.innerWidth < 768 ? 200 : 600}
+            data-aos-offset={window.innerWidth < 768 ? 200 : 500}
           >
             <div className="bg-[#e6f0e6] rounded-full w-20 h-20 items-center justify-center flex">
               <img
@@ -96,10 +96,10 @@ const Benefits = () => {
               />
             </div>
 
-            <h3 className="font-bold pb-1 text-xl md:text-lg lg:text-xl text-[#1e6e1e] pt-4">
+            <h3 className="font-bold pb-1 text-xl md:text-lg lg:text-xl text-[#1e6e1e]  pt-4">
               Packaging sostenible
             </h3>
-            <p className="text-lg md:text-base lg:text-lg">
+            <p className="text-lg  lg:text-lg">
               Materiales reciclables y biodegradables que minimizan nuestro
               impacto en el planeta.
             </p>
@@ -113,7 +113,7 @@ const Benefits = () => {
           <div
             className="flex flex-col justify-center items-center text-center"
             data-aos="zoom-in"
-            data-aos-offset={window.innerWidth < 768 ? 250 : 800}
+            data-aos-offset={window.innerWidth < 768 ? 250 : 700}
           >
             <div className="bg-[#e6f0e6] rounded-full w-20 h-20 flex items-center justify-center">
               <img
@@ -126,7 +126,7 @@ const Benefits = () => {
             <h3 className="font-bold pb-1 text-xl md:text-lg lg:text-xl text-[#1e6e1e] pt-4">
               Cruelty-Free
             </h3>
-            <p className="text-lg md:text-base lg:text-lg">
+            <p className="text-lg  lg:text-lg">
               Productos 100% veganos y libres de crueldad, respetando a todos
               los seres vivos.
             </p>

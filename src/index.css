@@ -15,6 +15,30 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
+
+  /* Colores primarios */
+  --primary-dark: #2E6B34;     /* Verde bosque - Elementos principales */
+  --primary-main: #4A8B54;     /* Verde natural - Identidad de marca */
+  --primary-light: #7BB989;    /* Verde suave - Elementos secundarios */
+  
+  /* Colores de acento */
+  --accent-warm: #D4A373;      /* Beige cálido - Destacados naturales */
+  --accent-cool: #80CBC4;      /* Verde menta - Elementos frescos */
+  
+  /* Neutrales */
+  --neutral-100: #FFFFFF;      /* Blanco - Fondos, texto sobre oscuro */
+  --neutral-200: #F8F5F0;      /* Crema claro - Fondos alternativos */
+  --neutral-300: #E6DFD4;      /* Beige claro - Bordes, separadores */
+  --neutral-400: #9C8E80;      /* Taupe - Texto secundario */
+  --neutral-500: #5D534B;      /* Marrón oscuro - Texto principal */
+  
+  /* Funcionales */
+  --success: #66BB6A;          /* Verde - Confirmaciones */
+  --error: #E57373;            /* Rojo suave - Errores */
+  --warning: #FFD54F;          /* Amarillo - Advertencias */
+  --info: #81C784;             /* Verde claro - Información */
 }
 body {
   margin: 0;
@@ -29,10 +53,10 @@ h1 {
 
 @layer components {
   .btn2 {
-    @apply bg-[#009688] text-lg text-white font-bold py-3 px-8 rounded-full transition-transform duration-200 ease-in-out;
+    @apply bg-[#4A8B54] text-lg text-white font-bold py-3 px-8 rounded-full transition-transform duration-200 ease-in-out;
   }
   .btn2:hover {
-    @apply bg-[#00776b];
+    @apply bg-[#2E6B34];
   }
   .btn2:active {
     @apply scale-95;

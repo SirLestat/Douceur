@@ -1,12 +1,30 @@
+import { useEffect, useState } from "react";
 import { useCart } from "../../context/CartContext";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 200);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const { cart } = useCart();
 
   const totalItems = cart.length;
   const subtotal = cart.reduce((acc, item) => acc + item.price, 0);
   return (
-    <div className="navbar bg-[#F5F6F3]/50 md:bg-transparent w-full md:w-11/12 text-black fixed md:absolute z-50 backdrop-blur-sm md:backdrop-blur-none top-0 md:top-20 md:left-1/2 md:-translate-x-1/2 mx-auto">
+    <div
+      className={`navbar bg-[#F5F6F3]/50 ${
+        isScrolled
+          ? "sm:bg-[#2E6B34] sm:text-white"
+          : "bg-transparent text-black"
+      } w-full text-black fixed z-50 backdrop-blur-sm top-0 mx-auto`}
+    >
       {/* Menú móvil y marca */}
       <div className="navbar-start">
         {/* Dropdown solo en móvil */}
@@ -45,7 +63,7 @@ const Navbar = () => {
 
         {/* Marca - Visible siempre */}
         <div className="flex items-center">
-          <a className="btn btn-ghost text-2xl md:text-4xl pl-2 hover:bg-transparent md:text-white">
+          <a className="btn btn-ghost text-2xl md:text-4xl pl-2 hover:bg-transparent">
             <img
               src="src\assets\hoja3.png"
               alt="Logo hoja verde"
@@ -60,22 +78,38 @@ const Navbar = () => {
       {/* Menú desktop y iconos */}
       <div className="navbar-end flex">
         {/* Links visibles solo en desktop */}
-        <div className="hidden md:flex items-center gap-x-2 pr-8 text-2xl font-semibold text-white">
-          <a className="hover:bg-black/20 px-4 py-2 rounded-full cursor-pointer">
+        <div className="hidden md:flex items-center gap-x-2 pr-8 text-xl ">
+          <a
+            className={`hover:bg-black/20 sm:hover:bg-[#2E6B34] sm:hover:text-white px-4 py-2 rounded-full cursor-pointer ${
+              isScrolled && "sm:hover:bg-[black]"
+            }`}
+          >
             Inicio
           </a>
-          <a className="hover:bg-black/20 px-4 py-2 rounded-full cursor-pointer">
+          <a
+            className={`hover:bg-black/20 sm:hover:bg-[#2E6B34] sm:hover:text-white px-4 py-2 rounded-full cursor-pointer ${
+              isScrolled && "sm:hover:bg-[black]"
+            }`}
+          >
             Productos
           </a>
-          <a className="hover:bg-black/20 px-4 py-2 rounded-full cursor-pointer">
+          <a
+            className={`hover:bg-black/20 sm:hover:bg-[#2E6B34] sm:hover:text-white px-4 py-2 rounded-full cursor-pointer ${
+              isScrolled && "sm:hover:bg-[black]"
+            }`}
+          >
             Nosotros
           </a>
         </div>
 
-        <button className="btn btn-ghost btn-circle">
+        <button
+          className={`btn btn-ghost btn-circle sm:hover:bg-[#2E6B34] sm:hover:text-white ${
+            isScrolled && "sm:hover:bg-[black]"
+          }`}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 md:text-white"
+            className={`h-6 w-6 ${isScrolled && "sm:text-white "}`}
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -90,11 +124,17 @@ const Navbar = () => {
         </button>
 
         <div className="dropdown dropdown-end">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-            <div className="indicator">
+          <div
+            tabIndex={0}
+            role="button"
+            className={`btn btn-ghost btn-circle sm:hover:bg-[#2E6B34] sm:hover:text-white ${
+              isScrolled && "sm:hover:bg-[black]"
+            }`}
+          >
+            <div className="indicator ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 md:text-white"
+                className={`h-6 w-6  ${isScrolled && "sm:text-white"}`}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -106,22 +146,30 @@ const Navbar = () => {
                   d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                 />
               </svg>
-              <span className="badge badge-sm indicator-item bg-[#009688] text-white">
+
+              <span className="badge badge-sm indicator-item bg-[#2E6B34] text-white">
                 {totalItems}
               </span>
             </div>
           </div>
           <div
             tabIndex={0}
-            className="card card-compact dropdown-content bg-[#F5F6F3] z-[1] mt-3 w-52 shadow border-2 border-[#8B9D83] rounded-2xl"
+            className="card card-normal dropdown-content bg-[#F5F6F3] z-[1] mt-3 w-52 shadow border-2 border-[#009688] rounded-2xl"
           >
             <div className="card-body">
               <span className="text-lg font-bold text-[#000000]">
                 {totalItems} Productos
               </span>
+              <ol>
+                {cart.map((item, index) => (
+                  <li key={index}>
+                    {item.name} - ${item.price}
+                  </li>
+                ))}
+              </ol>
               <span className="text-[#000000]">Subtotal: ${subtotal}</span>
               <div className="card-actions">
-                <button className="btn btn-block bg-[#8B9D83] text-white hover:bg-[#5D6D56]">
+                <button className="btn btn-block bg-[#009688] text-white hover:bg-[#00776b]">
                   Ver Carrito
                 </button>
               </div>

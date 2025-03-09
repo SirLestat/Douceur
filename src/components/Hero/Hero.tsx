@@ -1,48 +1,61 @@
+import { Leaf } from "lucide-react";
+
 const Hero = () => {
   return (
-    <section 
-    className="p-4 md:px-8"
+    <section
+      className=" pt-8 p-4 sm:pt-0 sm:p-0 sm:mx-8"
       aria-label="Sección principal - Portada de modelo"
       data-aos="fade-down"
       data-aos-duration="1500"
     >
-      {/* Grid en lg para organizar contenido */}
-      <div className="hero min-h-[74vh] md:h-[100vh] md:w-12/12 place-items-center rounded-3xl relative md:grid md:grid-cols-2 lg:items-center ">
-        {/* Texto a la izquierda en lg */}
-        <div
-          className="hero-content absolute bottom-0 left-0 w-full p-6 
-                          bg-gradient-to-t from-black/80 to-transparent rounded-b-3xl 
-                          md:relative md:bg-none md:p-12 lg:col-start-1"
-        >
-          <div className="text-white md:text-white ">
-            <h1 className="text-5xl font-bold md:text-8xl">Belleza Natural</h1>
-            <p className="py-4 text-lg md:text-3xl ">
-              Descubre nuestra línea de cosméticos orgánicos certificados,
-              elaborados con ingredientes naturales para el cuidado consciente
-              de tu piel.
-            </p>
-
-            {/* Botón visible solo en md+ */}
-            <button className="btn2 hidden md:flex items-center justify-center  min-w-[200px] h-[56px]  md:text-xl text-white  mt-4">
-              Compra ahora
-            </button>
+      <div className="min-h-[74vh] lg:h-[100vh] rounded-3xl md:grid md:grid-cols-2 md:items-center md:justify-center md:gap-8 ">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-[15%] left-[10%] animate-float-slow">
+            <Leaf className="w-8 h-8 text-[#7BB989]/60 rotate-45" />
+          </div>
+          <div className="absolute top-[30%] left-[35%] animate-pulse">
+            <Leaf className="w-6 h-6 text-[#7BB989]/70 -rotate-12" />
+          </div>
+          <div className="absolute bottom-[25%] left-[20%] animate-float-reverse">
+            <Leaf className="w-10 h-10 text-[#7BB989]/50 rotate-90" />
           </div>
         </div>
-
-        {/* Imagen a la derecha en md+ */}
-        
-        <img
-          src="./src/components/hero/assets/hero8.png"
-          alt="Portada mostrando una mujer de belleza natural usando cosméticos orgánicos"
-          className="object-cover w-full h-full md:max-h-screen rounded-3xl 
-                        md:w-12/12 md:h-[95vh]  col-span-2 col-start-1 md:object-top"
-        />
+        <div className="text-black">
+          <h1 className="text-5xl font-bold sm:text-8xl text-[#4A8B54] sm:mb-8 mb-4">
+            Belleza Natural
+          </h1>
+          <p className="text-lg sm:text-3xl sm:mb-4 mb-4 text-[#5D534B]">
+            Descubre nuestra línea de cosméticos orgánicos certificados,
+            elaborados con ingredientes naturales para el cuidado consciente de
+            tu piel.
+          </p>
+          <div className="flex flex-wrap items-center gap-4 text-sm text-[#5D534B] sm:mb-4">
+            <div className="flex items-center gap-2 bg-white/80 px-3 py-1 rounded-full border-[#E6DFD4] border-2">
+              <Leaf className="h-4 w-4 text-[#4A8B54]" />
+              <span>Sin parabenos</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/80 px-3 py-1 rounded-full border-[#E6DFD4] border-2">
+              <Leaf className="h-4 w-4 text-[#4A8B54]" />
+              <span>Cruelty-free</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/80 px-3 py-1 rounded-full border-[#E6DFD4] border-2">
+              <Leaf className="h-4 w-4 text-[#4A8B54]" />
+              <span>Eco-friendly</span>
+            </div>
+          </div>
+          <button className="btn2 rounded-full w-full bg-[#4A8B54] text-white  my-4 text-xl items sm:max-w-[16vh]">
+            Compra ahora
+          </button>
+        </div>
+        <div className="sm:flex justify-center">
+          <img
+            src="src\components\Hero\assets\hero2.jpg"
+            alt=""
+            className="rounded-3xl object-cover object-right h-96 sm:h-full sm:w-full "
+          />
+        </div>
       </div>
-
-      {/* Botón visible solo en sm */}
-      <button className="md:hidden btn rounded-full w-full bg-[#009688] text-white  mt-4 text-lg items">
-        Compra ahora
-      </button>
+      button
     </section>
   );
 };

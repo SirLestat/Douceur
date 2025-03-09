@@ -32,6 +32,8 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
     setCart(cart.filter((item) => item.id !== productId));
   };
 
+
+
   return (
     <CartContext.Provider value={{ cart, addToCart, removeToCart }}>
       {children}

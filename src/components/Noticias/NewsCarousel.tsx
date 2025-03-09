@@ -3,7 +3,7 @@ import { newslist } from "./News";
 
 const NewsCarousel: React.FC = () => {
   return (
-    <div className="max-w-[150vh] mx-6 md:mx-auto">
+    <div className="container mx-auto px-6">
       <h2 className="text-black text-3xl font-bold pb-4 text-left">Noticias</h2>
       <div className="flex overflow-x-auto space-x-4 pb-4">
         {newslist.map((news) => (

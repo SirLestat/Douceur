@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <div className="pt-16 pb-4">
-      <footer className="footer bg-[#ffffff] text-[#6B7B64] p-10 rounded-3xl grid grid-cols-2 md:flex md:justify-around font-semibold">
+    <div className="pt-16 pb-4 container mx-auto">
+      <footer className="footer bg-[#009688]/10 text-[#009688] p-10 rounded-3xl grid grid-cols-2 md:flex md:justify-around font-semibold">
         <div className="col-span-2 flex items-center flex-col md:items-start">
           <img
             src="src\assets\hoja3.png"
@@ -9,28 +9,28 @@ const Footer = () => {
             className="w-[4vh] h-[4vh]"
             loading="lazy"
           />
-          <p className="text-[#5D6D56] text-3xl font-bold">Douceur</p>
-          <p className="text-[#6B7B64] mt-2  md:text-left font-normal">
+          <p className="text-[#111827] text-3xl font-bold ">Douceur</p>
+          <p className="text-[#111827] mt-2  md:text-left font-normal">
             Douceur Industries Ltd. Providing reliable tech since 1992
           </p>
         </div>
 
         <nav>
-          <h6 className="footer-title text-[#5D6D56]">Services</h6>
+          <h6 className="footer-title text-[#111827]">Services</h6>
           <a className="link link-hover">Branding</a>
           <a className="link link-hover">Design</a>
           <a className="link link-hover">Marketing</a>
           <a className="link link-hover">Advertisement</a>
         </nav>
         <nav>
-          <h6 className="footer-title text-[#5D6D56]">Company</h6>
+          <h6 className="footer-title text-[#111827]">Company</h6>
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Contact</a>
           <a className="link link-hover">Jobs</a>
           <a className="link link-hover">Press kit</a>
         </nav>
         <nav>
-          <h6 className="footer-title text-[#5D6D56]">Social</h6>
+          <h6 className="footer-title text-[#111827]">Social</h6>
           <div className="grid grid-flow-col gap-4">
             <a>
               <svg

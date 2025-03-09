@@ -15,7 +15,7 @@ const HorizontalScroll: React.FC<HorizontalScrollProps> = ({
   selectedCategory,
 }) => {
   return (
-    <div className="px-6 md:px-0">
+    <div>
       <p className="text-black font-bold text-3xl pt-8">Los más vendidos</p>
       <div className="overflow-x-auto scroll-container whitespace-nowrap pt-4 hide-scrollbar">
         <div className="inline-flex gap-4">

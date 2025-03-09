@@ -29,8 +29,8 @@ const ProductCarousel = () => {
   }));
 
   return (
-    <div className="bg-[#f5f8f5] w-full p-0">
-      <div className="max-w-[150vh] mx-auto pb-8 ">
+    <div className=" w-full p-0 ">
+      <div className="container mx-auto px-6">
         <HorizontalScroll
           buttons={buttons}
           selectedCategory={selectedCategory}

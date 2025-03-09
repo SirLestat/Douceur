@@ -1,6 +1,6 @@
 // tailwind.config.js
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {},
   },
@@ -8,18 +8,19 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          primary: '#8B9D83', // Rojo
-          secondary: '#00FF00', // Verde
-          accent: '#0000FF', // Azul
-          neutral: '#333333', // Gris oscuro
-          'base-100': '#FFFFFF', // Blanco
-          info: '#3ABFF8',
-          success: '#36D399',
-          warning: '#FBBD23',
-          error: '#F87272',
+          primary: "#4A8B54",
+          "primary-focus": "#2E6B34", // Para hover/active
+          "primary-content": "#FFFFFF", // Texto sobre primary
+          accent: "#80CBC4",
+          neutral: "#5D534B",
+          "base-100": "#F8F5F0", // Fondo principal
+          info: "#81C784",
+          success: "#66BB6A",
+          warning: "#FFD54F",
+          error: "#E57373",
         },
       },
     ],
   },
-  plugins: [require('daisyui')],
+  plugins: [require("daisyui")],
 };
