@@ -154,22 +154,26 @@ const Navbar = () => {
           </div>
           <div
             tabIndex={0}
-            className="card card-normal dropdown-content bg-[#F5F6F3] z-[1] mt-3 w-52 shadow border-2 border-[#009688] rounded-2xl"
+            className="card card-normal dropdown-content bg-[#F5F6F3] z-[1] mt-3 w-52 shadow border-2 border-[#2E6B34] rounded-2xl"
           >
             <div className="card-body">
               <span className="text-lg font-bold text-[#000000]">
                 {totalItems} Productos
               </span>
-              <ol>
+              <div>
                 {cart.map((item, index) => (
-                  <li key={index}>
-                    {item.name} - ${item.price}
-                  </li>
+                  <div>
+                    <p key={index} className="text-black text-sm">
+                      {item.name} - ${item.price}
+                      
+                    </p>
+                    <br />
+                  </div>
                 ))}
-              </ol>
+              </div>
               <span className="text-[#000000]">Subtotal: ${subtotal}</span>
               <div className="card-actions">
-                <button className="btn btn-block bg-[#009688] text-white hover:bg-[#00776b]">
+                <button className="btn btn-block bg-[#9B644C] text-white hover:bg-[#523528]">
                   Ver Carrito
                 </button>
               </div>

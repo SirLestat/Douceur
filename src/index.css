@@ -53,7 +53,7 @@ h1 {
 
 @layer components {
   .btn2 {
-    @apply bg-[#4A8B54] text-lg text-white font-bold py-3 px-8 rounded-full transition-transform duration-200 ease-in-out;
+    @apply bg-[#4A8B54]  text-lg text-white font-bold py-3 px-8 rounded-full transition-transform duration-200 ease-in-out;
   }
   .btn2:hover {
     @apply bg-[#2E6B34];

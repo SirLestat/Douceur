@@ -5,7 +5,6 @@ import HorizontalScroll from "./HorizontalScroll";
 import Carousel from "./Carousel";
 import TestimonialCarousel from "../testimonial/Testimonial";
 
-
 const ProductCarousel = () => {
   // Estado para guardar la categoría seleccionada
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -29,7 +28,11 @@ const ProductCarousel = () => {
   }));
 
   return (
-    <div className=" w-full p-0 ">
+    <div
+      className=" w-full p-0  "
+      data-aos="fade-up"
+      data-aos-offset={window.innerWidth < 768 ? 300 : 400}
+    >
       <div className="container mx-auto px-6">
         <HorizontalScroll
           buttons={buttons}
@@ -37,7 +40,7 @@ const ProductCarousel = () => {
         />
 
         <Carousel products={filteredProducts} />
-        <TestimonialCarousel/>
+        <TestimonialCarousel />
       </div>
     </div>
   );

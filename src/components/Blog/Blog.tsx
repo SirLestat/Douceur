@@ -1,7 +1,7 @@
 const Blog = () => {
   return (
     <div className="relative">
-      {/* Imagen de fondo solo para esta sección */}
+      {/* Imagen de fondo  */}
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat z-[-1]"
         style={{
@@ -14,12 +14,12 @@ const Blog = () => {
       <div
         className="py-16  text-black md:grid md:grid-cols-2 container mx-auto px-6 relative z-10"
         data-aos="fade-right"
-        data-aos-offset={window.innerWidth < 768 ? 400 : 700}
+        data-aos-offset={window.innerWidth < 768 ? 400 : 800}
         data-aos-duration="1000"
         data-aos-once="true"
       >
         <div>
-          <h2 className="text-3xl font-bold pb-4 md:text-4xl text-white">
+          <h2 className="text-3xl font-bold pb-4 md:text-4xl text-white text-center sm: ">
             Cuidado Natural, Belleza Auténtica
           </h2>
 

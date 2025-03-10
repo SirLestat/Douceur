@@ -24,14 +24,14 @@ const HorizontalScroll: React.FC<HorizontalScrollProps> = ({
               key={index}
               onClick={button.onClick}
               className={`
-            btn2 font-normal text-sm
+            btn2 font-semibold text-sm
             transform transition-all duration-300
-            hover:-translate-y-1 hover:shadow-lg
+            hover:-translate-y-1 
             active:translate-y-0
             ${
               selectedCategory === button.category
-                ? "-translate-y-1 shadow-lg ring-2 ring-[#8B9D83]"
-                : "translate-y-0 shadow-md"
+                ? "-translate-y-1 "
+                : "translate-y-0"
             }
           `}
             >

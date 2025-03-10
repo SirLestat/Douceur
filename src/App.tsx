@@ -17,7 +17,7 @@ function App() {
   }, []);
   return (
     <CartProvider>
-      <div className="w-full min-h-screen pt-12 md:pt-0">
+      <div className="w-full min-h-screen pt-12 md:pt-20 lg:pt-0">
         <Navbar />
         <div className=" w-full mx-auto">
           <Hero />

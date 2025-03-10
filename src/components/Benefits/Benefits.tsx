@@ -34,11 +34,11 @@ const Benefits = () => {
         />
         <img
           src="src\components\Benefits\assets\organic.jpg"
-          alt="Crema facial"
+          alt="aguacate organico"
           className="col-span-1 row-span-2 row-start-1 col-start-1 rounded-3xl w-full h-full object-cover"
           data-aos="fade-up"
           loading="lazy"
-          data-aos-offset={window.innerWidth < 768 ? 150 : 300}
+          data-aos-offset={window.innerWidth < 768 ? 150 : 450}
         />
         <img
           src="src\components\Benefits\assets\demo-1.png"
@@ -46,7 +46,7 @@ const Benefits = () => {
           className="col-span-2 row-span-4 row-start-1 col-start-2 rounded-3xl w-full h-full object-cover"
           data-aos="fade-down"
           loading="lazy"
-          data-aos-offset={window.innerWidth < 768 ? 150 : 400}
+          data-aos-offset={window.innerWidth < 768 ? 150 : 700}
         />
       </div>
 
@@ -60,7 +60,7 @@ const Benefits = () => {
           <div
             className="flex flex-col justify-center items-center text-center"
             data-aos="zoom-in"
-            data-aos-offset={window.innerWidth < 768 ? 150 : 300}
+            data-aos-offset={window.innerWidth < 768 ? 150 : 200}
           >
             <div className="bg-[#e6f0e6] rounded-full w-20 h-20 items-center justify-center flex">
               <img
@@ -86,7 +86,7 @@ const Benefits = () => {
           <div
             className="flex flex-col justify-center items-center py-4 text-center"
             data-aos="zoom-in"
-            data-aos-offset={window.innerWidth < 768 ? 200 : 500}
+            data-aos-offset={window.innerWidth < 768 ? 200 : 350}
           >
             <div className="bg-[#e6f0e6] rounded-full w-20 h-20 items-center justify-center flex">
               <img
@@ -113,7 +113,7 @@ const Benefits = () => {
           <div
             className="flex flex-col justify-center items-center text-center"
             data-aos="zoom-in"
-            data-aos-offset={window.innerWidth < 768 ? 250 : 700}
+            data-aos-offset={window.innerWidth < 768 ? 250 : 500}
           >
             <div className="bg-[#e6f0e6] rounded-full w-20 h-20 flex items-center justify-center">
               <img
