@@ -147,7 +147,7 @@ const Navbar = () => {
                 />
               </svg>
 
-              <span className="badge badge-sm indicator-item bg-[#2E6B34] text-white">
+              <span className="badge badge-sm indicator-item bg-[#ffffff] text-black">
                 {totalItems}
               </span>
             </div>
