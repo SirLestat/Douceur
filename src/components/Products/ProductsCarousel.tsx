@@ -3,7 +3,7 @@ import { useState } from "react";
 import { products } from "./Products";
 import HorizontalScroll from "./HorizontalScroll";
 import Carousel from "./Carousel";
-import TestimonialCarousel from "../testimonial/Testimonial";
+import TestimonialCard from "../testimonial/Testimonial";
 
 const ProductCarousel = () => {
   // Estado para guardar la categoría seleccionada
@@ -25,6 +25,7 @@ const ProductCarousel = () => {
   const buttons = categories.map((cat) => ({
     label: cat.label,
     onClick: () => setSelectedCategory(cat.category), // Al hacer clic, actualiza el estado
+    category: cat.category, // Añadir la propiedad category
   }));
 
   return (
@@ -40,7 +41,7 @@ const ProductCarousel = () => {
         />
 
         <Carousel products={filteredProducts} />
-        <TestimonialCarousel />
+        
       </div>
     </div>
   );

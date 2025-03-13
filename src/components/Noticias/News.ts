@@ -8,16 +8,22 @@ export interface News {
 export const newslist: News[] = [
   {
     id: 1,
-    title: "Descubre los mejores ingredientes naturales para tu piel",
-    image:
-      "https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp",
-    imgdescription: "asdasdqwe"  
+    title: "El Poder del Aloe Vera para tu Piel",
+    image: "src/components/Noticias/assets/aloe.jpg",
+    imgdescription: "Gel de aloe vera en un recipiente de vidrio",
   },
   {
     id: 2,
-    title: "asdasd",
-    image:
-      "https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp",
-    imgdescription: "asdasddsaddqwe"  
+    title:
+      "¡El Coco Está Ocultando un Poder de Belleza Tan Fuerte que Nadie Se Atrevería a Contarlo!",
+    image: "src/components/Noticias/assets/coco.jpg",
+    imgdescription: "asdasddsaddqwe",
+  },
+  {
+    id: 3,
+    title: "Errores que Dañan tu Piel",
+    image: "src/components/Noticias/assets/tip1.jpg",
+    imgdescription:
+      "Mujer rodeada de productos potencialmente dañinos par ala piel",
   },
 ];

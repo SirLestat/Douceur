@@ -1,4 +1,5 @@
 // En Carousel.tsx
+import { ShoppingCart } from "lucide-react";
 import { useCart } from "../../context/CartContext";
 import { Product } from "./Products";
 
@@ -20,21 +21,15 @@ const Carousel: React.FC<CarouselProps> = ({ products }) => {
                 loading="lazy"
               />
 
-              <button
+              <ShoppingCart
                 onClick={() => addToCart(product)}
-                className="btn absolute bg-[#000000]/40 border-black/20 hover:border-black hover:bg-[#000000] -top-[0px] -right-[0px]  rounded-none rounded-bl-3xl  rounded-tr-3xl w-[56px]"
-              >
-                <img
-                  src="src\components\Products\assets\carrito2.png"
-                  alt="icono agregar al carrito"
-                  className="w-full h-auto"
-                />
-              </button>
+                className="btn absolute bg-[#ffffff] border-white hover:border-[#2D6A4F] hover:bg-[#2D6A4F] -top-[1px] -right-[1px]  rounded-none rounded-bl-3xl  rounded-tr-3xl w-[56px] text-black hover:text-white"
+              />
             </div>
-            <p className="text-lg text-black font-medium max-w-72">{product.name}</p>
-            <p className="text-sm text-neutral-500 pb-4">
-              $ {product.price} MXN
+            <p className="text-lg text-[#5D534B] font-bold max-w-72">
+              {product.name}
             </p>
+            <p className="text-sm text-[#1B4332] pb-4">$ {product.price} MXN</p>
           </div>
         ))}
       </div>

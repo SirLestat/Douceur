@@ -9,7 +9,7 @@ import { CartProvider } from "./context/CartContext";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { useEffect } from "react";
-
+import TestimonialCard from "./components/testimonial/Testimonial";
 
 function App() {
   useEffect(() => {
@@ -23,6 +23,7 @@ function App() {
           <Hero />
           <Benefits />
           <Products />
+          <TestimonialCard />
           <Blog />
           <NewsCarousel />
           <Footer />

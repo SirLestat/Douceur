@@ -6,12 +6,13 @@ const Benefits = () => {
         className="flex flex-col items-center text-center sm:text-left"
         data-aos="fade-up"
       >
-        <p className="text-4xl font-bold mb-8 md:text-5xl lg:text-6xl text-[#2E6B34]">
+        <p className="text-5xl font-bold mb-8 md:text-5xl text-[#2D6A4F]">
           ¿Por qué elegir Douceur?
         </p>
+        <hr className="bg-[#52B788] w-full h-[1px] mb-4"/>
 
-        <div className="w-full max-w-full text-left">
-          <p className="text-2xl font-medium md:text-3xl lg:text-4xl text-[#5D534B]">
+        <div className="w-full max-w-full text-left ">
+          <p className="text-3xl font-medium  text-[#5D534B] ">
             Ingredientes <strong>orgánicos</strong>
           </p>
           <p className="mt-4 mb-8 text-lg md:text-xl ">
@@ -62,18 +63,19 @@ const Benefits = () => {
             data-aos="zoom-in"
             data-aos-offset={window.innerWidth < 768 ? 150 : 200}
           >
-            <div className="bg-[#e6f0e6] rounded-full w-20 h-20 items-center justify-center flex">
+            <div className=" rounded-full w-20 h-20 items-center justify-center flex bg-[#52b788]/10 ">
               <img
                 src="src\components\Benefits\assets\benefit2.2.png"
                 alt="Sin parabenos"
                 loading="lazy"
+               
               />
             </div>
 
-            <h3 className="font-bold pb-1 text-xl md:text-lg lg:text-xl pt-4 text-[#1e6e1e]">
+            <h3 className="font-bold pb-1 text-xl md:text-lg lg:text-xl pt-4 text-[#2D6A4F]">
               Pureza garantizada
             </h3>
-            <p className="text-lg  lg:text-lg">
+            <p className="text-lg  text-[#5D534B]">
               Sin parabenos, sulfatos o siliconas que puedan irritar tu piel o
               dañar el medio ambiente.
             </p>
@@ -88,7 +90,7 @@ const Benefits = () => {
             data-aos="zoom-in"
             data-aos-offset={window.innerWidth < 768 ? 200 : 350}
           >
-            <div className="bg-[#e6f0e6] rounded-full w-20 h-20 items-center justify-center flex">
+            <div className=" rounded-full w-20 h-20 items-center justify-center flex bg-[#52b788]/10">
               <img
                 src="src\components\Benefits\assets\benefit1.2.png"
                 alt="Packaging sostenible"
@@ -96,10 +98,10 @@ const Benefits = () => {
               />
             </div>
 
-            <h3 className="font-bold pb-1 text-xl md:text-lg lg:text-xl text-[#1e6e1e]  pt-4">
+            <h3 className="font-bold pb-1 text-xl md:text-lg lg:text-xl text-[#2D6A4F]  pt-4">
               Packaging sostenible
             </h3>
-            <p className="text-lg  lg:text-lg">
+            <p className="text-lg text-[#5D534B]">
               Materiales reciclables y biodegradables que minimizan nuestro
               impacto en el planeta.
             </p>
@@ -115,7 +117,7 @@ const Benefits = () => {
             data-aos="zoom-in"
             data-aos-offset={window.innerWidth < 768 ? 250 : 500}
           >
-            <div className="bg-[#e6f0e6] rounded-full w-20 h-20 flex items-center justify-center">
+            <div className="rounded-full w-20 h-20 flex items-center justify-center bg-[#52b788]/10">
               <img
                 src="src\components\Benefits\assets\benefit3.3.png"
                 alt="Cruelty-Free"
@@ -123,10 +125,10 @@ const Benefits = () => {
               />
             </div>
 
-            <h3 className="font-bold pb-1 text-xl md:text-lg lg:text-xl text-[#1e6e1e] pt-4">
+            <h3 className="font-bold pb-1 text-xl md:text-lg lg:text-xl text-[#2D6A4F] pt-4">
               Cruelty-Free
             </h3>
-            <p className="text-lg  lg:text-lg">
+            <p className="text-lg text-[#5D534B]">
               Productos 100% veganos y libres de crueldad, respetando a todos
               los seres vivos.
             </p>

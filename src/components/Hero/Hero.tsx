@@ -11,10 +11,10 @@ const Hero = () => {
       <div className="min-h-[74vh] lg:h-[100vh] rounded-3xl md:grid md:grid-cols-2 lg:items-center md:justify-center md:gap-8 ">
         
         <div className="text-black">
-          <h1 className="text-5xl font-bold sm:text-7xl text-[#4A8B54] sm:mb-4 mb-4">
+          <h1 className="text-7xl font-bold  text-[#2D6A4F] sm:mb-4 mb-4 text-center md:text-left">
             Belleza Natural
           </h1>
-          <p className="text-lg sm:text-xl sm:mb-4 mb-4 text-[#5D534B]">
+          <p className="text-xl sm:mb-4 mb-4 text-[#5D534B]">
             Descubre nuestra línea de cosméticos orgánicos certificados,
             elaborados con ingredientes naturales para el cuidado consciente de
             tu piel.
@@ -33,7 +33,7 @@ const Hero = () => {
               <span>Eco-friendly</span>
             </div>
           </div>
-          <button className="btn2 rounded-full w-full bg-[#4A8B54] text-white  my-4 text-xl items sm:max-w-[30vh] ">
+          <button className="btn2 rounded-full w-full bg-[#E07A5F] text-[#ffffff]  my-4 text-xl items sm:max-w-[30vh] hover:bg-[#C76A53]  ">
             Compra ahora
           </button>
         </div>
@@ -45,7 +45,7 @@ const Hero = () => {
           />
         </div>
       </div>
-      button
+      
     </section>
   );
 };

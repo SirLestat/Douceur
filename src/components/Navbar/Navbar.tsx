@@ -6,7 +6,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 200);
+      setIsScrolled(window.scrollY > 100);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -19,15 +19,10 @@ const Navbar = () => {
   const subtotal = cart.reduce((acc, item) => acc + item.price, 0);
   return (
     <div
-      className={`navbar bg-[#F5F6F3]/50 ${
-        isScrolled
-          ? "sm:bg-[#2E6B34] sm:text-white"
-          : "bg-transparent text-black"
-      } w-full text-black fixed z-50 backdrop-blur-sm top-0 mx-auto`}
+      className={`navbar bg-[#ffffff] border-b-[#E6F2ED] border-[2px] w-full text-[#5D534B] fixed z-50 backdrop-blur-sm top-0 mx-auto font-medium`}
     >
-      {/* Menú móvil y marca */}
       <div className="navbar-start">
-        {/* Dropdown solo en móvil */}
+        {/* Dropdown solo en mobile */}
         <div className="dropdown md:hidden">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <svg
@@ -75,27 +70,27 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Menú desktop y iconos */}
+      
       <div className="navbar-end flex">
-        {/* Links visibles solo en desktop */}
+        
         <div className="hidden md:flex items-center gap-x-2 pr-8 text-xl ">
           <a
-            className={`hover:bg-black/20 sm:hover:bg-[#2E6B34] sm:hover:text-white px-4 py-2 rounded-full cursor-pointer ${
-              isScrolled && "sm:hover:bg-[black]"
+            className={`btn2 hover:bg-black/20 sm:hover:bg-[#2D6A4F] sm:hover:text-white px-4 py-2 rounded-full cursor-pointer ${
+              isScrolled && "sm:hover:bg-[#2D6A4F]"
             }`}
           >
             Inicio
           </a>
           <a
-            className={`hover:bg-black/20 sm:hover:bg-[#2E6B34] sm:hover:text-white px-4 py-2 rounded-full cursor-pointer ${
-              isScrolled && "sm:hover:bg-[black]"
+            className={`btn2 hover:bg-black/20 sm:hover:bg-[#2D6A4F] sm:hover:text-white px-4 py-2 rounded-full cursor-pointer ${
+              isScrolled && "sm:hover:bg-[#2D6A4F]"
             }`}
           >
             Productos
           </a>
           <a
-            className={`hover:bg-black/20 sm:hover:bg-[#2E6B34] sm:hover:text-white px-4 py-2 rounded-full cursor-pointer ${
-              isScrolled && "sm:hover:bg-[black]"
+            className={`btn2 hover:bg-black/20 sm:hover:bg-[#2D6A4F] sm:hover:text-white px-4 py-2 rounded-full cursor-pointer ${
+              isScrolled && "sm:hover:bg-[#2D6A4F]"
             }`}
           >
             Nosotros
@@ -103,13 +98,13 @@ const Navbar = () => {
         </div>
 
         <button
-          className={`btn btn-ghost btn-circle sm:hover:bg-[#2E6B34] sm:hover:text-white ${
-            isScrolled && "sm:hover:bg-[black]"
+          className={`btn btn-ghost btn-circle sm:hover:bg-[#2D6A4F] sm:hover:text-white ${
+            isScrolled && "sm:hover:bg-[#2D6A4F]"
           }`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className={`h-6 w-6 ${isScrolled && "sm:text-white "}`}
+            className={`h-6 w-6 `}
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -127,14 +122,14 @@ const Navbar = () => {
           <div
             tabIndex={0}
             role="button"
-            className={`btn btn-ghost btn-circle sm:hover:bg-[#2E6B34] sm:hover:text-white ${
-              isScrolled && "sm:hover:bg-[black]"
+            className={`btn btn-ghost btn-circle sm:hover:bg-[#2D6A4F] sm:hover:text-white ${
+              isScrolled && "sm:hover:bg-[#2D6A4F]"
             }`}
           >
             <div className="indicator ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className={`h-6 w-6  ${isScrolled && "sm:text-white"}`}
+                className={`h-6 w-6 `}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -147,7 +142,7 @@ const Navbar = () => {
                 />
               </svg>
 
-              <span className="badge badge-sm indicator-item bg-[#ffffff] text-black">
+              <span className="badge badge-sm indicator-item bg-[#2D6A4F] text-white">
                 {totalItems}
               </span>
             </div>
@@ -157,25 +152,55 @@ const Navbar = () => {
             className="card card-normal dropdown-content bg-[#F5F6F3] z-[1] mt-3 w-52 shadow border-2 border-[#2E6B34] rounded-2xl"
           >
             <div className="card-body">
-              <span className="text-lg font-bold text-[#000000]">
+              <span className="text-lg font-bold text-[#5D534B]">
                 {totalItems} Productos
               </span>
-              <div>
-                {cart.map((item, index) => (
-                  <div>
-                    <p key={index} className="text-black text-sm">
-                      {item.name} - ${item.price}
-                      
-                    </p>
-                    <br />
-                  </div>
-                ))}
-              </div>
-              <span className="text-[#000000]">Subtotal: ${subtotal}</span>
-              <div className="card-actions">
-                <button className="btn btn-block bg-[#9B644C] text-white hover:bg-[#523528]">
+
+          
+              <div className="card-actions justify-center">
+                {/* Open the modal using document.getElementById('ID').showModal() method */}
+                <button
+                  className="btn2 text-[#FFFFFF] bg-[#2D6A4F] hover:bg-[#1c4231] py-3 mt-2 px-6"
+                  onClick={() =>
+                    (
+                      document.getElementById("my_modal_2") as HTMLDialogElement
+                    ).showModal()
+                  }
+                >
                   Ver Carrito
                 </button>
+                <dialog id="my_modal_2" className="modal">
+                  <div className="modal-box">
+                    {cart.length === 0 ? (
+                      <h3 className="font-bold text-medium">
+                        Parece que aún no has elegido tus productos favoritos.
+                        Explora nuestra tienda y encuentra el cuidado ideal para
+                        tu piel. 💚
+                      </h3>
+                    ) : (
+                      <div>
+                        <p>Mi carrito</p>
+                        <hr className="h-[2px] bg-[#5D534B] mb-4"/>
+                        {cart.map((item, index) => (
+                          <div>
+                            <p key={index} className="text-black text-sm mb-4">
+                              🌱 {item.name} - ${item.price} 
+                            </p>
+                            
+                          </div>
+                        ))}
+                        <hr className="h-[2px] bg-[#5D534B]"/>
+                        <p className="pb-4 text-right">Total: ${subtotal} MXN</p>
+                        <button className="btn2 w-full bg-[#5D534B] text-[#ffffff] hover:bg-[#3d3731]">Comprar ahora</button>
+                      </div>
+                    )}
+                  </div>
+                  <form method="dialog" className="modal-backdrop">
+                    <button>close</button>
+                    
+                  </form>
+                  
+                </dialog>
               </div>
             </div>
           </div>
