@@ -28,7 +28,7 @@ const Blog = () => {
               loading="lazy"
               src="src/components/Blog/assets/nature1.jpg"
               alt="Modelo en la naturaleza con flor en el cabello"
-              className="w-full rounded-br-full rounded-tl-full object-contain row-start-2 col-start-2"
+              className="w-full h-auto rounded-br-full rounded-tl-full object-contain row-start-2 col-start-2"
             />
           </div>
         </div>
