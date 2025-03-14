@@ -28,7 +28,7 @@ const testimonials: TestimonialProps[] = [
   },
 ];
 
-export default function SimpleTestimonials() {
+export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // intervalo 5 segundos

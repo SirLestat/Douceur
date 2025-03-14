@@ -16,7 +16,10 @@ const HorizontalScroll: React.FC<HorizontalScrollProps> = ({
 }) => {
   return (
     <div>
-      <p className="text-[#2D6A4F] font-bold text-2xl md:text-3xl pt-8 pb-4">
+      <p
+        
+        className="text-[#2D6A4F] font-bold text-2xl md:text-3xl pt-8 pb-4"
+      >
         Los más vendidos
       </p>
       <hr className="bg-[#52B788] w-full h-[1px] mb-4" />

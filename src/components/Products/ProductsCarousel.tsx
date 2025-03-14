@@ -3,7 +3,7 @@ import { useState } from "react";
 import { products } from "./Products";
 import HorizontalScroll from "./HorizontalScroll";
 import Carousel from "./Carousel";
-import TestimonialCard from "../testimonial/Testimonial";
+
 
 const ProductCarousel = () => {
   // Estado para guardar la categoría seleccionada
@@ -30,6 +30,7 @@ const ProductCarousel = () => {
 
   return (
     <div
+      
       className=" w-full p-0  "
       data-aos="fade-up"
       data-aos-offset={window.innerWidth < 768 ? 300 : 400}
@@ -41,7 +42,6 @@ const ProductCarousel = () => {
         />
 
         <Carousel products={filteredProducts} />
-        
       </div>
     </div>
   );

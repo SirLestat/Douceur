@@ -9,7 +9,7 @@ const Benefits = () => {
         <p className="text-5xl font-bold mb-8 md:text-5xl text-[#2D6A4F]">
           ¿Por qué elegir Douceur?
         </p>
-        <hr className="bg-[#52B788] w-full h-[1px] mb-4"/>
+        <hr className="bg-[#52B788] w-full h-[1px] mb-4" />
 
         <div className="w-full max-w-full text-left ">
           <p className="text-3xl font-medium  text-[#5D534B] ">
@@ -68,7 +68,6 @@ const Benefits = () => {
                 src="src\components\Benefits\assets\benefit2.2.png"
                 alt="Sin parabenos"
                 loading="lazy"
-               
               />
             </div>
 
@@ -133,7 +132,10 @@ const Benefits = () => {
               los seres vivos.
             </p>
             <hr className="bg-[#33850A] my-6 w-32 h-[1px]" />
-            <p className="text-[#2e8b57] font-semibold text-md">
+            <p
+              id="productsSection"
+              className="text-[#2e8b57] font-semibold text-md"
+            >
               Certificación Leaping Bunny
             </p>
           </div>

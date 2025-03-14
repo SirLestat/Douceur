@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="py-16 container mx-auto">
+    <div className="py-16 px-6 sm:px-0 container mx-auto">
       <footer className="footer bg-[#F2F7F2] p-10 rounded-3xl grid grid-cols-2 md:flex md:justify-around">
         <div className="col-span-2 flex items-center flex-col md:items-start">
           <img
@@ -17,20 +17,36 @@ const Footer = () => {
 
         <nav>
           <h6 className="footer-title text-[#2D6A4F]">Services</h6>
-          <a className="link link-hover text-[#5D534B] hover:text-[#2E6B34]">Branding</a>
-          <a className="link link-hover text-[#5D534B] hover:text-[#2E6B34]">Design</a>
-          <a className="link link-hover text-[#5D534B] hover:text-[#2E6B34]">Marketing</a>
-          <a className="link link-hover text-[#5D534B] hover:text-[#2E6B34]">Advertisement</a>
+          <a className="link link-hover text-[#5D534B] hover:text-[#2E6B34]">
+            Branding
+          </a>
+          <a className="link link-hover text-[#5D534B] hover:text-[#2E6B34]">
+            Design
+          </a>
+          <a className="link link-hover text-[#5D534B] hover:text-[#2E6B34]">
+            Marketing
+          </a>
+          <a className="link link-hover text-[#5D534B] hover:text-[#2E6B34]">
+            Advertisement
+          </a>
         </nav>
-        
+
         <nav>
           <h6 className="footer-title text-[#2D6A4F]">Company</h6>
-          <a className="link link-hover text-[#5D534B] hover:text-[#2E6B34]">About us</a>
-          <a className="link link-hover text-[#5D534B] hover:text-[#2E6B34]">Contact</a>
-          <a className="link link-hover text-[#5D534B] hover:text-[#2E6B34]">Jobs</a>
-          <a className="link link-hover text-[#5D534B] hover:text-[#2E6B34]">Press kit</a>
+          <a className="link link-hover text-[#5D534B] hover:text-[#2E6B34]">
+            About us
+          </a>
+          <a className="link link-hover text-[#5D534B] hover:text-[#2E6B34]">
+            Contact
+          </a>
+          <a className="link link-hover text-[#5D534B] hover:text-[#2E6B34]">
+            Jobs
+          </a>
+          <a className="link link-hover text-[#5D534B] hover:text-[#2E6B34]">
+            Press kit
+          </a>
         </nav>
-        
+
         <nav>
           <h6 className="footer-title text-[#2D6A4F]">Social</h6>
           <div className="grid grid-flow-col gap-4">
@@ -70,7 +86,7 @@ const Footer = () => {
           </div>
         </nav>
       </footer>
-      
+
       <div className="text-center mt-8 text-[#5D534B] text-sm border-t border-[#D1E7D6] pt-4">
         <p>© 2024 Douceur - All rights reserved</p>
       </div>

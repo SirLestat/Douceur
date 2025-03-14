@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { newslist } from "./News";
 
 const NewsCarousel: React.FC = () => {
@@ -9,22 +10,23 @@ const NewsCarousel: React.FC = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {newslist.map((news) => (
-          <div
-            key={news.id}
-            className="p-4 bg-[#5d534b15] rounded-3xl shadow-lg transition-transform transform hover:scale-105  cursor-pointer active:scale-100"
-          >
-            <img
-              src={news.image}
-              className="w-full h-auto max-h-60 rounded-3xl object-cover aspect-[4/3]"
-              alt={news.imgdescription}
-              loading="lazy"
-            />
+          <Link to="/blog">
+            <div
+              key={news.id}
+              className="p-4 bg-[#5d534b15] rounded-3xl shadow-lg transition-transform transform hover:scale-105  cursor-pointer active:scale-100"
+            >
+              <img
+                src={news.image}
+                className="w-full h-auto max-h-60 rounded-3xl object-cover aspect-[4/3]"
+                alt={news.imgdescription}
+                loading="lazy"
+              />
 
-            <div className="text-[#5D534B] text-md font-medium pt-4 flex justify-between items-center">
-              <p>{news.title}</p>
+              <div className="text-[#5D534B] text-md font-medium pt-4 flex justify-between items-center">
+                <p>{news.title}</p>
+              </div>
             </div>
-            
-          </div>
+          </Link>
         ))}
       </div>
     </div>

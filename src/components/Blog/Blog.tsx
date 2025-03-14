@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 const Blog = () => {
   return (
     <div className="relative">
-      {/* Imagen de fondo  */}
+     
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-right sm:bg-center bg-no-repeat  z-[-1] "
         style={{
@@ -10,7 +12,7 @@ const Blog = () => {
         }}
       ></div>
 
-      {/* Contenido del Blog */}
+      
       <div
         className="py-16  text-black md:grid md:grid-cols-2 container mx-auto px-6 relative z-10 gap-8"
         data-aos="fade-right"
@@ -42,9 +44,11 @@ const Blog = () => {
               Descubre el poder de los ingredientes orgánicos para una piel
               radiante, saludable y en armonía con la naturaleza.
             </p>
-            <button className="btn2 bg-[#E07A5F] hover:bg-[#C76A53] text-[#FFFFFF] text-lg max-w-[320px]">
-              Leer blog
-            </button>
+            <Link to="blog">
+              <button className="btn2 bg-[#E07A5F] hover:bg-[#C76A53] text-[#FFFFFF] text-lg sm:max-w-[320px] w-full">
+                Leer blog
+              </button>
+            </Link>
           </div>
         </div>
       </div>

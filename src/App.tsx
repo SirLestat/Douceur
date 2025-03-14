@@ -1,15 +1,12 @@
-import Benefits from "./components/Benefits/Benefits";
-import Blog from "./components/Blog/Blog";
-import Footer from "./components/Footer/Footer";
-import Hero from "./components/Hero/Hero";
-import Navbar from "./components/Navbar/Navbar";
-import NewsCarousel from "./components/Noticias/NewsCarousel";
-import Products from "./components/Products/ProductsCarousel";
 import { CartProvider } from "./context/CartContext";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { useEffect } from "react";
-import TestimonialCard from "./components/testimonial/Testimonial";
+import { Route, Routes } from "react-router";
+import Layout from "./layout/Layout";
+import Home from "./Pages/Home";
+import TipsPage from "./Pages/TipsPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   useEffect(() => {
@@ -17,18 +14,13 @@ function App() {
   }, []);
   return (
     <CartProvider>
-      <div className="w-full min-h-screen pt-12 md:pt-20 lg:pt-0">
-        <Navbar />
-        <div className=" w-full mx-auto">
-          <Hero />
-          <Benefits />
-          <Products />
-          <TestimonialCard />
-          <Blog />
-          <NewsCarousel />
-          <Footer />
-        </div>
-      </div>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="blog" element={<TipsPage />} />
+        </Route>
+      </Routes>
     </CartProvider>
   );
 }
