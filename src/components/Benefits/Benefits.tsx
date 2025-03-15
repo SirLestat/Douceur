@@ -26,7 +26,7 @@ const Benefits = () => {
 
       <div className="grid grid-cols-2 grid-rows-4 gap-4 md:gap-8 w-full h-[60vh]">
         <img
-          src="src\components\Benefits\assets\organic4.jpg"
+          src="public/benefits/organic4.webp"
           alt="ingredientes naturales organicos"
           className="rounded-3xl w-full h-full object-cover col-start-1 col-span-1 row-span-2 "
           data-aos="fade-down"
@@ -34,15 +34,17 @@ const Benefits = () => {
           data-aos-offset={window.innerWidth < 768 ? 150 : 300}
         />
         <img
-          src="src\components\Benefits\assets\organic.jpg"
+          src="public\benefits\organic.webp"
           alt="aguacate organico"
           className="col-span-1 row-span-2 row-start-1 col-start-1 rounded-3xl w-full h-full object-cover"
           data-aos="fade-up"
           loading="lazy"
           data-aos-offset={window.innerWidth < 768 ? 150 : 450}
+          width="full"
+          height="auto"
         />
         <img
-          src="src\components\Benefits\assets\demo-1.png"
+          src="public\benefits\demo-1.webp"
           alt="Resultado de uso de crema facial"
           className="col-span-2 row-span-4 row-start-1 col-start-2 rounded-3xl w-full h-full object-cover"
           data-aos="fade-down"
@@ -65,7 +67,7 @@ const Benefits = () => {
           >
             <div className=" rounded-full w-20 h-20 items-center justify-center flex bg-[#52b788]/10 ">
               <img
-                src="src\components\Benefits\assets\benefit2.2.png"
+                src="public\benefits\benefit2.2.webp"
                 alt="Sin parabenos"
                 loading="lazy"
               />
@@ -91,7 +93,7 @@ const Benefits = () => {
           >
             <div className=" rounded-full w-20 h-20 items-center justify-center flex bg-[#52b788]/10">
               <img
-                src="src\components\Benefits\assets\benefit1.2.png"
+                src="public\benefits\benefit1.2.webp"
                 alt="Packaging sostenible"
                 loading="lazy"
               />
@@ -118,7 +120,7 @@ const Benefits = () => {
           >
             <div className="rounded-full w-20 h-20 flex items-center justify-center bg-[#52b788]/10">
               <img
-                src="src\components\Benefits\assets\benefit3.3.png"
+                src="public\benefits\benefit3.3.webp"
                 alt="Cruelty-Free"
                 loading="lazy"
               />

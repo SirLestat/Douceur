@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
         </div>
         <div className="sm:flex justify-center">
           <img
-            src="src\components\Hero\assets\hero2.jpg"
+            src="public\hero\hero2.webp"
             alt=""
             className="rounded-3xl object-cover object-right h-96 sm:h-full sm:w-full"
           />

@@ -3,16 +3,14 @@ import { Link } from "react-router-dom";
 const Blog = () => {
   return (
     <div className="relative">
-     
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-right sm:bg-center bg-no-repeat  z-[-1] "
         style={{
-          backgroundImage: "url('src/components/Blog/assets/nature12.jpg')",
+          backgroundImage: "url('public/blog/nature12.webp')",
           backgroundAttachment: "fixed",
         }}
       ></div>
 
-      
       <div
         className="py-16  text-black md:grid md:grid-cols-2 container mx-auto px-6 relative z-10 gap-8"
         data-aos="fade-right"
@@ -28,7 +26,7 @@ const Blog = () => {
           <div>
             <img
               loading="lazy"
-              src="src/components/Blog/assets/nature1.jpg"
+              src="public/blog/nature1.webp"
               alt="Modelo en la naturaleza con flor en el cabello"
               className="w-full h-auto rounded-br-full rounded-tl-full object-contain row-start-2 col-start-2"
             />

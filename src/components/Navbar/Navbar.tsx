@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
               <Link to="/">Inicio</Link>
             </li>
             <li>
-              Productos
+              <button>Productos</button>
             </li>
             <li>
               <Link to="/blog">Blog</Link>
@@ -85,14 +85,13 @@ const Navbar: React.FC = () => {
           >
             Inicio
           </Link>
-          <a
-            
+          <button
             className={`btn2 hover:bg-black/20 sm:hover:bg-[#2D6A4F] sm:hover:text-white px-4 py-2 rounded-full cursor-pointer ${
               isScrolled && "sm:hover:bg-[#2D6A4F]"
             }`}
           >
             Productos
-          </a>
+          </button>
           <Link
             to="/blog"
             className={`btn2 hover:bg-black/20 sm:hover:bg-[#2D6A4F] sm:hover:text-white px-4 py-2 rounded-full ${

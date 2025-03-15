@@ -7,23 +7,23 @@ export interface News {
 
 export const newslist: News[] = [
   {
+    id: 3,
+    title: "Errores que Dañan tu Piel",
+    image: "public/tips/tip1.webp",
+    imgdescription:
+      "Mujer rodeada de productos potencialmente dañinos par ala piel",
+  },
+  {
     id: 1,
     title: "El Poder del Aloe Vera para tu Piel",
-    image: "src/assets/assets/aloe.jpg",
+    image: "public/tips/aloe.webp",
     imgdescription: "Gel de aloe vera en un recipiente de vidrio",
   },
   {
     id: 2,
     title:
       "¡El Coco Está Ocultando un Poder de Belleza Tan Fuerte que Nadie Se Atrevería a Contarlo!",
-    image: "src/assets/assets/coco.jpg",
+    image: "public/tips/coco.webp",
     imgdescription: "asdasddsaddqwe",
-  },
-  {
-    id: 3,
-    title: "Errores que Dañan tu Piel",
-    image: "src/assets/assets/tip1.jpg",
-    imgdescription:
-      "Mujer rodeada de productos potencialmente dañinos par ala piel",
   },
 ];

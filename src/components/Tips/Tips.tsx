@@ -11,7 +11,7 @@ const Tips: React.FC = () => {
     >
       <div className="mx-auto sm:mx-20 mt-4 lg:mt-32 text-[#5D534B] flex flex-col items-center">
         <img
-          src="src/assets/assets/tip1.jpg"
+          src="public\tips\tip1.webp"
           alt={firstNews.imgdescription}
           className="rounded-3xl w-full max-w-4xl object-cover shadow-lg "
           loading="lazy"
@@ -107,7 +107,7 @@ const Tips: React.FC = () => {
             <h3 className="text-2xl font-bold text-[#2D6A4F]">
               Conclusión: Por una Belleza Natural Consciente 🌱
             </h3>
-            <p className="pt-4">
+            <p className="pt-4 text-justify">
               Cuidar nuestra piel con productos naturales orgánicos no solo
               mejora su salud y apariencia, sino que representa una elección
               respetuosa con nuestro cuerpo y el medio ambiente. Conocer los
