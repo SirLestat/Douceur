@@ -29,17 +29,17 @@ const Benefits = () => {
           src="public/benefits/organic4.webp"
           alt="ingredientes naturales organicos"
           className="rounded-3xl w-full h-full object-cover col-start-1 col-span-1 row-span-2 "
-          data-aos="fade-down"
+          data-aos="fade-right"
           loading="lazy"
-          data-aos-offset={window.innerWidth < 768 ? 150 : 300}
+          data-aos-offset={window.innerWidth < 768 ? 150 : 350}
         />
         <img
           src="public\benefits\organic.webp"
           alt="aguacate organico"
           className="col-span-1 row-span-2 row-start-1 col-start-1 rounded-3xl w-full h-full object-cover"
-          data-aos="fade-up"
+          data-aos="fade-right"
           loading="lazy"
-          data-aos-offset={window.innerWidth < 768 ? 150 : 450}
+          data-aos-offset={window.innerWidth < 768 ? 150 : 300}
           width="full"
           height="auto"
         />
@@ -49,7 +49,7 @@ const Benefits = () => {
           className="col-span-2 row-span-4 row-start-1 col-start-2 rounded-3xl w-full h-full object-cover"
           data-aos="fade-down"
           loading="lazy"
-          data-aos-offset={window.innerWidth < 768 ? 150 : 700}
+          data-aos-offset={window.innerWidth < 768 ? 150 : 450}
         />
       </div>
 

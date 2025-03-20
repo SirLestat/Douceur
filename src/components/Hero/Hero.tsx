@@ -12,7 +12,11 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="pt-8 p-4 sm:pt-0 sm:p-0 sm:mx-8">
+    <section
+      className="pt-8 p-4 sm:pt-0 sm:p-0 sm:mx-8"
+      data-aos="fade-down"
+      data-aos-duration="1500"
+    >
       <div className="min-h-[74vh] lg:h-[100vh] rounded-3xl md:grid md:grid-cols-2 lg:items-center md:justify-center md:gap-8">
         <div className="text-black">
           <h1 className="text-7xl font-bold text-[#2D6A4F] sm:mb-4 mb-4 text-center md:text-left">
