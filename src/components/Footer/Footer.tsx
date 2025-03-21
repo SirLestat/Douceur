@@ -16,7 +16,7 @@ const Footer = () => {
         </div>
 
         <nav>
-          <h6 className="footer-title text-[#2D6A4F]">Services</h6>
+          <h3 className="footer-title text-[#2D6A4F]">Services</h3>
           <p className=" text-[#5D534B] hover:text-[#2E6B34]">Branding</p>
           <p className=" text-[#5D534B] hover:text-[#2E6B34]">Design</p>
           <p className=" text-[#5D534B] hover:text-[#2E6B34]">Marketing</p>
@@ -24,7 +24,7 @@ const Footer = () => {
         </nav>
 
         <nav>
-          <h6 className="footer-title text-[#2D6A4F]">Company</h6>
+          <h3 className="footer-title text-[#2D6A4F]">Company</h3>
           <p className=" text-[#5D534B] hover:text-[#2E6B34]">About us</p>
           <p className=" text-[#5D534B] hover:text-[#2E6B34]">Contact</p>
           <p className=" text-[#5D534B] hover:text-[#2E6B34]">Jobs</p>
@@ -32,7 +32,7 @@ const Footer = () => {
         </nav>
 
         <nav>
-          <h6 className="footer-title text-[#2D6A4F]">Social</h6>
+          <h3 className="footer-title text-[#2D6A4F]">Social</h3>
           <div className="grid grid-flow-col gap-4">
             <p>
               <svg

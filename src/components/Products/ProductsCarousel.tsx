@@ -1,46 +1,46 @@
-// Crea un nuevo componente ProductCarousel.tsx
-import { useState } from "react";
+
+import { useState, useMemo } from "react";
 import { products } from "./Products";
 import HorizontalScroll from "./HorizontalScroll";
 import Carousel from "./Carousel";
 
-
 const ProductCarousel = () => {
-  // Estado para guardar la categoría seleccionada
+ 
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  // Filtrar productos basado en la categoría seleccionada
-  const filteredProducts = selectedCategory
-    ? products.filter((product) => product.category === selectedCategory)
-    : products;
+  // Filtrar productos por categoría 
+  const filteredProducts = useMemo(
+    () =>
+      selectedCategory
+        ? products.filter((product) => product.category === selectedCategory)
+        : products,
+    [selectedCategory]
+  );
 
-  // Configurar los botones con sus categorías
+  //categorías para los botones
   const categories = [
-    { label: "Todos", category: null }, // Muestra todos los productos
+    { label: "Todos", category: null },
     { label: "Skincare", category: "skincare" },
     { label: "Belleza", category: "belleza" },
   ];
 
-  // Crear la configuración de los botones
   const buttons = categories.map((cat) => ({
     label: cat.label,
-    onClick: () => setSelectedCategory(cat.category), // Al hacer clic, actualiza el estado
-    category: cat.category, // Añadir la propiedad category
+    onClick: () => setSelectedCategory(cat.category),
+    category: cat.category,
   }));
+
+
+  const aosOffset = useMemo(() => (window.innerWidth < 768 ? 300 : 400), []);
 
   return (
     <div
-      
-      className=" w-full p-0  "
+      className="w-full p-0"
       data-aos="fade-up"
-      data-aos-offset={window.innerWidth < 768 ? 300 : 400}
+      data-aos-offset={aosOffset}
     >
       <div className="container mx-auto px-6">
-        <HorizontalScroll
-          buttons={buttons}
-          selectedCategory={selectedCategory}
-        />
-
+        <HorizontalScroll buttons={buttons} selectedCategory={selectedCategory} />
         <Carousel products={filteredProducts} />
       </div>
     </div>
