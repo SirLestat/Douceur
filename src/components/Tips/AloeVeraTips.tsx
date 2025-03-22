@@ -9,16 +9,16 @@ const AloeVeraTips: React.FC = () => {
       data-aos="fade-down"
       data-aos-duration="1500"
     >
-      <div className="mx-auto sm:mx-20 mt-4 lg:mt-32 text-[#5D534B] flex flex-col items-center">
+      <div className="mx-auto sm:mx-20 mt-4 lg:mt-16 text-[#5D534B] flex flex-col items-center">
         <img
-          src="public\tips\tip1.webp"
+          src="/tips/aloe.webp"
           alt={firstNews.imgdescription}
           className="rounded-3xl w-full max-w-4xl object-cover shadow-lg"
           loading="lazy"
         />
 
-        <h2 className="text-3xl sm:text-5xl font-bold py-6 text-[#2D6A4F] text-center leading-tight">
-          ✨ El Poder Mágico del Aloe Vera para tu Piel ✨
+        <h2 className="text-3xl sm:text-5xl font-bold py-8 text-[#2D6A4F] text-center leading-tight">
+          El Poder Mágico del Aloe Vera para tu Piel ✨
         </h2>
 
         <main className="text-lg text-justify leading-relaxed">
@@ -38,60 +38,73 @@ const AloeVeraTips: React.FC = () => {
           </p>
 
           {/* Imagen placeholder */}
-          <div className="pt-8 text-center">
-            <p className="italic text-[#5D534B]">¡INSERTA IMAGEN AQUÍ!</p>
-            <p>
-              [Foto de una planta de aloe vera con sus características hojas
-              carnosas]
-            </p>
+          <div className="pt-8  grid md:grid-cols-2 gap-y-8">
+            <img
+              src="/tips/aloe1.avif"
+              alt="maceta con planta de savila"
+              width="1500px"
+              height="1000px"
+              loading="lazy"
+              className="rounded-3xl w-[30rem] h-auto"
+            />
+            <div className="flex flex-col justify-center gap-4 mx-auto">
+              <h3 className="text-2xl font-bold text-[#2D6A4F] ">
+                Beneficios rápidos que te encantarán:
+              </h3>
+              <ul className="  text-start">
+                <li>💧 Hidrata sin dejar sensación grasa</li>
+                <li>🔥 Calma quemaduras y picaduras al instante</li>
+                <li>✨ Previene el envejecimiento prematuro</li>
+                <li>🧴 Perfecto para TODOS los tipos de piel</li>
+              </ul>
+            </div>
           </div>
 
-          <h3 className="text-2xl font-bold text-[#2D6A4F] pt-8">
-            Beneficios rápidos que te encantarán:
-          </h3>
-          <ul className="list-disc pl-8">
-            <li>💧 Hidrata sin dejar sensación grasa</li>
-            <li>🔥 Calma quemaduras y picaduras al instante</li>
-            <li>✨ Previene el envejecimiento prematuro</li>
-            <li>🧴 Perfecto para TODOS los tipos de piel</li>
-          </ul>
-
-          <h3 className="text-2xl font-bold text-[#2D6A4F] pt-8">
+          <h3 className="text-2xl font-bold text-[#2D6A4F] pt-16">
             💚 Usos increíbles que no conocías
           </h3>
 
-          <h4 className="text-xl font-semibold text-[#2D6A4F] pt-6">
-            Para pieles secas = ¡Adiós sequedad!
-          </h4>
-          <p>
-            El aloe tiene una capacidad asombrosa para retener agua, lo que lo
-            hace ideal si tu piel parece un desierto. ¡La hidratación dura todo
-            el día!
-          </p>
-
           {/* Imagen placeholder */}
-          <div className="pt-8 text-center">
-            <p className="italic text-[#5D534B]">¡INSERTA IMAGEN AQUÍ!</p>
-            <p>[Foto de gel de aloe vera siendo aplicado en la piel]</p>
+          <div className="pt-8  grid md:grid-cols-2  justify-between">
+            <div className="flex flex-col justify-center gap-4">
+              <h4 className="text-xl font-semibold text-[#2D6A4F] ">
+                Para pieles secas = ¡Adiós sequedad!
+              </h4>
+              <p>
+                El aloe tiene una capacidad asombrosa para retener agua, lo que
+                lo hace ideal si tu piel parece un desierto. ¡La hidratación
+                dura todo el día!
+              </p>
+              <h4 className="text-xl font-semibold text-[#2D6A4F] ">
+                Para limpiar tu rostro = ¡Piel purificada!
+              </h4>
+              <p>
+                ¿Cansada de limpiadores que resecan? El aloe limpia
+                profundamente pero con suavidad, dejando tu piel fresca y sin
+                esa horrible sensación de tirantez.
+              </p>
+
+              <h4 className="text-xl font-semibold text-[#2D6A4F] pt-6">
+                Para después del sol = ¡Salvador total!
+              </h4>
+              <p>
+                ¿Te has pasado con el sol? El aloe es EL remedio definitivo para
+                calmar, refrescar y ayudar a reparar la piel después de la
+                exposición solar.
+              </p>
+            </div>
+
+            <div className="grid justify-center items-center">
+              <img
+                src="/tips/aloe2.avif"
+                alt="maceta con planta de savila"
+                width="1500px"
+                height="1000px"
+                loading="lazy"
+                className="rounded-3xl w-[30rem] h-auto"
+              />
+            </div>
           </div>
-
-          <h4 className="text-xl font-semibold text-[#2D6A4F] pt-6">
-            Para limpiar tu rostro = ¡Piel purificada!
-          </h4>
-          <p>
-            ¿Cansada de limpiadores que resecan? El aloe limpia profundamente
-            pero con suavidad, dejando tu piel fresca y sin esa horrible
-            sensación de tirantez.
-          </p>
-
-          <h4 className="text-xl font-semibold text-[#2D6A4F] pt-6">
-            Para después del sol = ¡Salvador total!
-          </h4>
-          <p>
-            ¿Te has pasado con el sol? El aloe es EL remedio definitivo para
-            calmar, refrescar y ayudar a reparar la piel después de la
-            exposición solar.
-          </p>
 
           <h3 className="text-2xl font-bold text-[#2D6A4F] pt-8">
             🌟 Hacks de belleza con Aloe Vera
@@ -108,6 +121,7 @@ const AloeVeraTips: React.FC = () => {
 
             {/* Imagen placeholder */}
             <div className="pt-8 text-center">
+              <img src="/tips/aloe3.avif" alt="" />
               <p className="italic text-[#5D534B]">¡INSERTA IMAGEN AQUÍ!</p>
               <p>[Foto de una chica joven con mascarilla de aloe vera]</p>
             </div>
@@ -148,6 +162,7 @@ const AloeVeraTips: React.FC = () => {
 
           {/* Imagen placeholder */}
           <div className="pt-8 text-center">
+            <img src="/tips/aloe4.avif" alt="" />
             <p className="italic text-[#5D534B]">¡INSERTA IMAGEN AQUÍ!</p>
             <p>[Foto de productos cosméticos naturales con aloe vera]</p>
           </div>

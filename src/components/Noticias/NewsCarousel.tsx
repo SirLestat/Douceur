@@ -12,7 +12,7 @@ const NewsCarousel: React.FC = () => {
         {newslist.map((news) => (
           <Link
             key={news.id}
-            to="/blog"
+            to={news.path}
             aria-label={`Leer más sobre ${news.title}`}
           >
             <article className="p-4 bg-[#5d534b15] rounded-3xl shadow-lg transition-transform transform hover:scale-105 cursor-pointer active:scale-100">

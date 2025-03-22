@@ -44,7 +44,7 @@ const Blog = () => {
             Descubre el poder de los ingredientes orgánicos para una piel
             radiante, saludable y en armonía con la naturaleza.
           </p>
-          <Link to="blog">
+          <Link to="blog/1">
             <button className="btn2 bg-[#E07A5F] hover:bg-[#C76A53] text-[#FFFFFF] text-lg sm:max-w-[320px] w-full">
               Leer blog
             </button>

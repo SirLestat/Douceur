@@ -1,7 +1,7 @@
 import { newslist } from "../Noticias/News";
 
 const Tips: React.FC = () => {
-  const firstNews = newslist[2];
+  const firstNews = newslist[0];
 
   return (
     <div
@@ -9,15 +9,15 @@ const Tips: React.FC = () => {
       data-aos="fade-down"
       data-aos-duration="1500"
     >
-      <div className="mx-auto sm:mx-20 mt-4 lg:mt-32 text-[#5D534B] flex flex-col items-center">
+      <div className="mx-auto sm:mx-20 mt-4 lg:mt-16 text-[#5D534B] flex flex-col items-center">
         <img
-          src="public\tips\tip1.webp"
+          src={firstNews.image}
           alt={firstNews.imgdescription}
           className="rounded-3xl w-full max-w-4xl object-cover shadow-lg "
           loading="lazy"
         />
 
-        <h2 className="text-3xl sm:text-5xl font-bold py-6 text-[#2D6A4F] text-center leading-tight">
+        <h2 className="text-3xl sm:text-5xl font-bold py-8 text-[#2D6A4F] text-center leading-tight">
           Errores que Dañan tu Piel: Soluciones Naturales para un Cutis
           Saludable
         </h2>
