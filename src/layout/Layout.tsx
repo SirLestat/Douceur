@@ -7,7 +7,7 @@ const Layout = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Reinicia el scroll como un ascensor que vuelve al piso 0
+    // Reinicia el scroll
     window.scrollTo(0, 0);
   }, [location.key]); // location.key cambia con cada navegación
 

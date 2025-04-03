@@ -1,19 +1,12 @@
-import { useEffect, useState } from "react";
 import { useCart } from "../../context/CartContext";
 import { LiaShoppingCartSolid } from "react-icons/lia";
 import { FiTrash2 } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import logo from "../../assets/hoja3.webp";
 
 const Navbar: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const { cart, removeFromCart, adjustQuantity, totalItems, subtotal } =
     useCart();
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 100);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <nav className="navbar fixed top-0 w-full bg-white border-b-2 border-[#E6F2ED] text-[#5D534B] z-50 backdrop-blur-sm font-medium flex justify-between">
@@ -39,7 +32,7 @@ const Navbar: React.FC = () => {
               />
             </svg>
           </button>
-          <ul className="dropdown-content menu menu-md mt-3 w-52 p-2 bg-white rounded-box shadow">
+          <ul className="dropdown-content menu menu-md mt-3 w-52 p-2 bg-white rounded-box shadow z">
             <li>
               <Link to="/">Inicio</Link>
             </li>
@@ -58,7 +51,7 @@ const Navbar: React.FC = () => {
           data-discover="true"
         >
           <img
-            src="src/assets/hoja3.png"
+            src={logo}
             alt="Logo Douceur"
             className="w-10 h-10"
             loading="eager"
@@ -69,17 +62,21 @@ const Navbar: React.FC = () => {
 
       {/* Menú desktop */}
       <div className="hidden md:flex navbar-end gap-x-4 pr-8 text-xl">
-        {["Inicio", "Productos", "Blog"].map((item, index) => (
-          <Link
-            key={index}
-            to={item === "Inicio" ? "/" : `/${item.toLowerCase()}`}
-            className={`btn2 hover:bg-black/20 sm:hover:bg-[#2D6A4F] sm:hover:text-white px-4 py-2 rounded-full ${
-              isScrolled ? "sm:hover:bg-[#2D6A4F]" : ""
-            }`}
-          >
-            {item}
-          </Link>
-        ))}
+        <Link to="/">
+          <button className="btn2 hover:bg-black/20 sm:hover:bg-[#2D6A4F] sm:hover:text-white px-4 py-2 rounded-full">
+            Inicio
+          </button>
+        </Link>
+        <Link to="/">
+          <button className="btn2 hover:bg-black/20 sm:hover:bg-[#2D6A4F] sm:hover:text-white px-4 py-2 rounded-full">
+            Productos
+          </button>
+        </Link>
+        <Link to="/blog/1">
+          <button className="btn2 hover:bg-black/20 sm:hover:bg-[#2D6A4F] sm:hover:text-white px-4 py-2 rounded-full">
+            Blog
+          </button>
+        </Link>
       </div>
 
       {/* Botón carrito */}

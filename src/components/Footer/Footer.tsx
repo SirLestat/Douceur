@@ -1,10 +1,12 @@
+import logo from "../../assets/hoja3.webp";
+
 const Footer = () => {
   return (
     <div className="py-16 px-6 sm:px-0 container mx-auto">
       <footer className="footer bg-[#F2F7F2] p-10 rounded-3xl grid grid-cols-2 md:flex md:justify-around">
         <div className="col-span-2 flex items-center flex-col md:items-start">
           <img
-            src="src\assets\hoja3.png"
+            src={logo}
             alt="Logo hoja verde"
             className="w-[4vh] h-[4vh]"
             loading="lazy"

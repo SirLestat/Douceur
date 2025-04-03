@@ -44,6 +44,8 @@ const Benefits = () => {
           data-aos="fade-right"
           loading="lazy"
           data-aos-offset={aosOffset.image1}
+          height={844}
+          width={980}
         />
         <img
           src="/benefits/organic.webp"
@@ -52,6 +54,8 @@ const Benefits = () => {
           data-aos="fade-right"
           loading="lazy"
           data-aos-offset={aosOffset.image2}
+          height={1000}
+          width={1000}
         />
         <img
           src="/benefits/demo-1.webp"
@@ -60,6 +64,8 @@ const Benefits = () => {
           data-aos="fade-down"
           loading="lazy"
           data-aos-offset={aosOffset.image3}
+          width={832}
+          height={1216}
         />
       </div>
 

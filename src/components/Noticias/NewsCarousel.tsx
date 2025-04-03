@@ -15,7 +15,7 @@ const NewsCarousel: React.FC = () => {
             to={news.path}
             aria-label={`Leer más sobre ${news.title}`}
           >
-            <article className="p-4 bg-[#5d534b15] rounded-3xl shadow-lg transition-transform transform hover:scale-105 cursor-pointer active:scale-100">
+            <article className="p-4 rounded-3xl shadow-lg transition-transform transform hover:scale-105 cursor-pointer active:scale-100 border border-[#2D6A4F]">
               <figure>
                 <img
                   src={news.image}
