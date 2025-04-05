@@ -1,4 +1,5 @@
 import { newslist } from "../Noticias/News";
+import NewsCarousel from "../Noticias/NewsCarousel";
 
 const AloeVeraTips: React.FC = () => {
   const firstNews = newslist[1];
@@ -28,8 +29,8 @@ const AloeVeraTips: React.FC = () => {
             rutina de belleza! Descubre todo sobre ella en esta mini-guía.
           </p>
 
-          <h3 className="text-2xl font-bold text-[#2D6A4F] pt-8">
-            🌱 ¿Qué hace tan especial al Aloe Vera?
+          <h3 className="text-2xl font-bold text-[#2D6A4F] pt-8 pb-4">
+            ¿Qué hace tan especial al Aloe Vera? 🌱
           </h3>
           <p>
             El aloe vera no es solo una planta bonita - ¡es un auténtico tesoro
@@ -38,34 +39,43 @@ const AloeVeraTips: React.FC = () => {
           </p>
 
           {/* Imagen placeholder */}
-          <div className="pt-8  grid md:grid-cols-2 gap-y-8">
-            <img
-              src="/tips/aloe1.avif"
-              alt="maceta con planta de savila"
-              width="1500px"
-              height="1000px"
-              loading="lazy"
-              className="rounded-3xl w-[30rem] h-auto"
-            />
+          <div className="pt-8  grid lg:grid-cols-2 gap-y-8">
+            <div className="flex justify-center lg:justify-start">
+              <img
+                src="/tips/aloe1.avif"
+                alt="maceta con planta de savila"
+                width="1500px"
+                height="1000px"
+                loading="lazy"
+                className="rounded-3xl w-[30rem] h-auto"
+              />
+            </div>
+
             <div className="flex flex-col justify-center gap-4 mx-auto">
               <h3 className="text-2xl font-bold text-[#2D6A4F] ">
                 Beneficios rápidos que te encantarán:
               </h3>
-              <ul className="  text-start">
-                <li>💧 Hidrata sin dejar sensación grasa</li>
-                <li>🔥 Calma quemaduras y picaduras al instante</li>
-                <li>✨ Previene el envejecimiento prematuro</li>
-                <li>🧴 Perfecto para TODOS los tipos de piel</li>
+              <ul className="text-start ">
+                <li className="pb-4">💧 Hidrata sin dejar sensación grasa</li>
+                <li className="pb-4">
+                  🔥 Calma quemaduras y picaduras al instante
+                </li>
+                <li className="pb-4">
+                  ✨ Previene el envejecimiento prematuro
+                </li>
+                <li className="pb-4">
+                  🧴 Perfecto para TODOS los tipos de piel
+                </li>
               </ul>
             </div>
           </div>
 
           <h3 className="text-2xl font-bold text-[#2D6A4F] pt-16">
-            💚 Usos increíbles que no conocías
+            Usos increíbles que no conocías 💚
           </h3>
 
           {/* Imagen placeholder */}
-          <div className="pt-8  grid md:grid-cols-2  justify-between">
+          <div className="pt-8  grid lg:grid-cols-2  justify-between">
             <div className="flex flex-col justify-center gap-4">
               <h4 className="text-xl font-semibold text-[#2D6A4F] ">
                 Para pieles secas = ¡Adiós sequedad!
@@ -75,7 +85,7 @@ const AloeVeraTips: React.FC = () => {
                 lo hace ideal si tu piel parece un desierto. ¡La hidratación
                 dura todo el día!
               </p>
-              <h4 className="text-xl font-semibold text-[#2D6A4F] ">
+              <h4 className="text-xl font-semibold text-[#2D6A4F] pt-8 ">
                 Para limpiar tu rostro = ¡Piel purificada!
               </h4>
               <p>
@@ -84,7 +94,7 @@ const AloeVeraTips: React.FC = () => {
                 esa horrible sensación de tirantez.
               </p>
 
-              <h4 className="text-xl font-semibold text-[#2D6A4F] pt-6">
+              <h4 className="text-xl font-semibold text-[#2D6A4F] pt-8">
                 Para después del sol = ¡Salvador total!
               </h4>
               <p>
@@ -94,10 +104,10 @@ const AloeVeraTips: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid justify-center items-center">
+            <div className="grid justify-center items-center pt-8">
               <img
                 src="/tips/aloe2.avif"
-                alt="maceta con planta de savila"
+                alt="mujer en spa con tratamiento de savila"
                 width="1500px"
                 height="1000px"
                 loading="lazy"
@@ -107,11 +117,11 @@ const AloeVeraTips: React.FC = () => {
           </div>
 
           <h3 className="text-2xl font-bold text-[#2D6A4F] pt-8">
-            🌟 Hacks de belleza con Aloe Vera
+            Hacks de belleza con Aloe Vera 🌟
           </h3>
 
           <section className="pt-8 border-b border-[#EDE0D4] pb-6">
-            <h3 className="text-2xl font-bold text-[#2D6A4F]">
+            <h3 className="text-2xl font-bold text-[#2D6A4F] pb-4">
               #1: Mascarilla express de 5 minutos
             </h3>
             <p>
@@ -119,11 +129,15 @@ const AloeVeraTips: React.FC = () => {
               te cepillas los dientes. ¡Piel hidratada en tiempo récord!
             </p>
 
-            {/* Imagen placeholder */}
-            <div className="pt-8 text-center">
-              <img src="/tips/aloe3.avif" alt="" />
-              <p className="italic text-[#5D534B]">¡INSERTA IMAGEN AQUÍ!</p>
-              <p>[Foto de una chica joven con mascarilla de aloe vera]</p>
+            <div className="pt-8 text-center justify-center flex">
+              <img
+                src="/tips/aloe3.avif"
+                alt="mujer aplicandose gel de savila"
+                className="rounded-3xl md:w-4/6 "
+                width="1500px"
+                height="1000px"
+                loading="lazy"
+              />
             </div>
           </section>
 
@@ -148,7 +162,7 @@ const AloeVeraTips: React.FC = () => {
           </section>
 
           <h3 className="text-2xl font-bold text-[#2D6A4F] pt-8">
-            💯 Por qué elegir cosmética natural con Aloe
+            Por qué elegir cosmética natural con Aloe 💯
           </h3>
           <ul className="list-disc pl-8">
             <li>
@@ -161,15 +175,17 @@ const AloeVeraTips: React.FC = () => {
           </ul>
 
           {/* Imagen placeholder */}
-          <div className="pt-8 text-center">
-            <img src="/tips/aloe4.avif" alt="" />
-            <p className="italic text-[#5D534B]">¡INSERTA IMAGEN AQUÍ!</p>
-            <p>[Foto de productos cosméticos naturales con aloe vera]</p>
+          <div className="pt-8 text-center flex justify-center">
+            <img
+              src="/tips/aloe4.avif"
+              alt=""
+              className="rounded-3xl md:w-4/6 "
+            />
           </div>
 
           <section className="pt-8 text-center">
             <h3 className="text-2xl font-bold text-[#2D6A4F]">
-              🔥 ¿Lo probamos?
+              ¿Lo probamos? 🔥
             </h3>
             <p className="pt-4">
               No esperes más para darle a tu piel el poder del aloe vera. Este
@@ -190,6 +206,7 @@ const AloeVeraTips: React.FC = () => {
           </section>
         </main>
       </div>
+      <NewsCarousel />
     </div>
   );
 };

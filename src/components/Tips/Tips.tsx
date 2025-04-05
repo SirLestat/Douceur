@@ -1,4 +1,5 @@
 import { newslist } from "../Noticias/News";
+import NewsCarousel from "../Noticias/NewsCarousel";
 
 const Tips: React.FC = () => {
   const firstNews = newslist[0];
@@ -119,6 +120,8 @@ const Tips: React.FC = () => {
           </section>
         </main>
       </div>
+
+      <NewsCarousel/>
     </div>
   );
 };

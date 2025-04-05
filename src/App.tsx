@@ -8,6 +8,7 @@ import Home from "./Pages/Home";
 import TipsPage from "./Pages/TipsPage";
 import ScrollToTop from "./components/ScrollToTop";
 import AloeVeraTips from "./components/Tips/AloeVeraTips";
+import CocoTips from "./components/Tips/CocoTips";
 
 function App() {
   useEffect(() => {
@@ -21,6 +22,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="blog/1" element={<TipsPage />} />
           <Route path="blog/2" element={<AloeVeraTips />} />
+          <Route path="blog/3" element={<CocoTips />} />
         </Route>
       </Routes>
     </CartProvider>

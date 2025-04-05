@@ -4,6 +4,7 @@ const TipsPage: React.FC = () => {
   return (
     <>
       <Tips />
+      
     </>
   );
 };
