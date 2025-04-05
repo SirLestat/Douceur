@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
               <Link to="/">Inicio</Link>
             </li>
             <li>
-              <button>Productos</button>
+              <Link to="/productos">Productos</Link>
             </li>
             <li>
               <Link to="/blog/1">Blog</Link>
@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
             Inicio
           </button>
         </Link>
-        <Link to="/">
+        <Link to="/productos">
           <button className="btn2 hover:bg-black/20 sm:hover:bg-[#2D6A4F] sm:hover:text-white px-4 py-2 rounded-full">
             Productos
           </button>
