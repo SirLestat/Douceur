@@ -24,29 +24,56 @@ const HorizontalScroll: React.FC<HorizontalScrollProps> = ({
 
       <nav className="hide-scrollbar" role="tablist">
         <div className="inline-flex gap-3 md:gap-4 min-w-max">
-          {buttons.map((button, index) => (
-            <button
-              aria-label={button.label}
-              key={index}
-              onClick={button.onClick}
-              className={`
-                text-sm md:text-base px-4 py-2 rounded-full font-semibold transition-all duration-300 transform 
-                focus:-translate-y-1.5 focus:bg-[#2D6A4F]
-                ${
-                  selectedCategory === button.category
-                    ? "bg-[#2D6A4F] text-white"
-                    : "bg-[#FFFFFF] text-[#5D534B] hover:bg-[#2D6A4F] border border-[#E9ECEF] hover:text-white"
-                }
-              `}
-              aria-selected={selectedCategory === button.category} // Usamos un valor booleano en aria-selected
-              role="tab"
-              aria-controls={`tabpanel-${button.category || "all"}`} // Identificador correcto
-            >
-              {button.label}
-            </button>
-          ))}
+          {buttons.map((button, index) => {
+            const id = `tab-${button.category || "all"}`;
+            const panelId = `tabpanel-${button.category || "all"}`;
+            const isSelected = selectedCategory === button.category;
+
+            return (
+              <button
+                key={index}
+                id={id}
+                onClick={button.onClick}
+                role="tab"
+                aria-selected={isSelected}
+                aria-controls={panelId}
+                aria-label={button.label}
+                className={`
+                  text-sm md:text-base px-4 py-2 rounded-full font-semibold transition-all duration-300 transform 
+                  focus:-translate-y-1.5 focus:bg-[#2D6A4F]
+                  ${
+                    isSelected
+                      ? "bg-[#2D6A4F] text-white"
+                      : "bg-[#FFFFFF] text-[#5D534B] hover:bg-[#2D6A4F] border border-[#E9ECEF] hover:text-white"
+                  }
+                `}
+              >
+                {button.label}
+              </button>
+            );
+          })}
         </div>
       </nav>
+
+      
+      {buttons.map((button, index) => {
+        const id = `tab-${button.category || "all"}`;
+        const panelId = `tabpanel-${button.category || "all"}`;
+        const isSelected = selectedCategory === button.category;
+
+        return (
+          <div
+            key={index}
+            id={panelId}
+            role="tabpanel"
+            aria-labelledby={id}
+            hidden={!isSelected}
+          >
+            
+            <span className="sr-only">Contenido de {button.label}</span>
+          </div>
+        );
+      })}
     </div>
   );
 };
