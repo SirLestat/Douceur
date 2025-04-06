@@ -50,13 +50,13 @@ h1 {
 
 @layer components {
   .btn2 {
-    @apply py-3 px-8 rounded-full transition-transform duration-200 ease-in-out;
+    @apply py-3 px-8 rounded-full transition-transform duration-100 ease-in-out;
   }
   .btn2:hover {
     @apply bg-[#1B4332];
   }
   .btn2:active {
-    @apply scale-90;
+    @apply scale-95;
   }
 }
 

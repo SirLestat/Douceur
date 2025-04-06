@@ -38,11 +38,9 @@ const HorizontalScroll: React.FC<HorizontalScrollProps> = ({
                     : "bg-[#FFFFFF] text-[#5D534B] hover:bg-[#2D6A4F] border border-[#E9ECEF] hover:text-white"
                 }
               `}
-              aria-selected={
-                selectedCategory === button.category ? "true" : "false"
-              }
+              aria-selected={selectedCategory === button.category} // Usamos un valor booleano en aria-selected
               role="tab"
-              aria-controls={`tabpanel-${button.category || "all"}`}
+              aria-controls={`tabpanel-${button.category || "all"}`} // Identificador correcto
             >
               {button.label}
             </button>

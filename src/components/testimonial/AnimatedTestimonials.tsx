@@ -150,13 +150,25 @@ export const AnimatedTestimonials = ({
             <div className="flex justify-end md:justify-start gap-4 pt-12 md:pt-0 text-justify">
               <button
                 onClick={handlePrev}
-                className=" flex h-7 w-7 items-center justify-center rounded-full bg-[#FFFFFF] hover:bg-[#2D6A4F] text-[#2D6A4F] hover:text-[#FFFFFF] border-[#2D6A4F] border transition-transform duration-100 ease-in-out active:scale-90"
+                aria-label="Ver testimonio anterior"
+                disabled={active === 0}
+                aria-disabled={active === 0} // Si estamos en el primer testimonio
+                className={`flex h-7 w-7 items-center justify-center rounded-full bg-[#FFFFFF] hover:bg-[#2D6A4F] text-[#2D6A4F] hover:text-[#FFFFFF] border-[#2D6A4F] border transition-transform duration-100 ease-in-out active:scale-90 ${
+                  active === 0 ? "opacity-50 cursor-not-allowed" : ""
+                }`}
               >
                 <IconArrowLeft className="h-5 w-5  " />
               </button>
               <button
                 onClick={handleNext}
-                className=" flex h-7 w-7 items-center justify-center rounded-full bg-[#FFFFFF] hover:bg-[#2D6A4F] text-[#2D6A4F] hover:text-[#FFFFFF] border-[#2D6A4F] border transition-transform duration-100 ease-in-out active:scale-90"
+                aria-label="Ver siguiente testimonio"
+                disabled={active === testimonials.length - 1}
+                aria-disabled={active === testimonials.length - 1} // Si estamos en el último testimonio
+                className={`flex h-7 w-7 items-center justify-center rounded-full bg-[#FFFFFF] hover:bg-[#2D6A4F] text-[#2D6A4F] hover:text-[#FFFFFF] border-[#2D6A4F] border transition-transform duration-100 ease-in-out active:scale-90 ${
+                  active === testimonials.length - 1
+                    ? "opacity-50 cursor-not-allowed"
+                    : ""
+                }`}
               >
                 <IconArrowRight className="h-5 w-5" />
               </button>

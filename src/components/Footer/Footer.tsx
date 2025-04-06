@@ -2,7 +2,7 @@ import logo from "../../assets/hoja3.webp";
 
 const Footer = () => {
   return (
-    <div className="py-16 px-6 sm:px-0 container mx-auto">
+    <div className="pt-16  px-6  container mx-auto">
       <footer className="footer bg-[#F2F7F2] p-10 rounded-3xl grid grid-cols-2 md:flex md:justify-around">
         <div className="col-span-2 flex items-center flex-col md:items-start">
           <img
@@ -74,7 +74,18 @@ const Footer = () => {
       </footer>
 
       <div className="text-center mt-8 text-[#5D534B] text-sm border-t border-[#D1E7D6] pt-4">
-        <p>© 2024 Douceur - All rights reserved</p>
+        <p className="pb-4">
+          © 2025 Douceur — All rights reserved <span className="mx-2">|</span>
+          Designed & developed by
+          <span className="mx-1">
+            <a
+              className="underline"
+              href="https://portfolio-alejandro-santiago.vercel.app/"
+            >
+              Alejandro Santiago
+            </a>
+          </span>
+        </p>
       </div>
     </div>
   );

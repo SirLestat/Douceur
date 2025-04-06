@@ -2,17 +2,16 @@ import { Link } from "react-router-dom";
 import { useMemo } from "react";
 
 const Blog = () => {
-
   const aosOffset = useMemo(() => (window.innerWidth < 768 ? 400 : 800), []);
 
   return (
     <div className="relative">
-     
       <div
-        className="absolute inset-0 w-full h-full bg-cover bg-right sm:bg-center bg-no-repeat z-[-1]"
+        className="absolute inset-0 w-full h-full bg-cover bg-right md:bg-left bg-no-repeat z-[-1] "
         style={{
-          backgroundImage: "url('/blog/nature12.webp')",
+          backgroundImage: "url('/blog/nature1.jpg')",
           backgroundAttachment: "fixed",
+          opacity:"80%"
         }}
         aria-hidden="true"
       ></div>
@@ -32,7 +31,7 @@ const Blog = () => {
             <img
               loading="lazy"
               src="/blog/nature1.webp"
-              alt="Modelo en la naturaleza con una flor en el cabello"
+              alt="Modelo con rodajas de pepino en el rostro"
               className="w-full h-auto rounded-br-full rounded-tl-full object-contain"
             />
           </figure>

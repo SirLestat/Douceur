@@ -8,11 +8,11 @@ const ScrollToTop = () => {
   useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Efecto suave como deslizar un dedo
+      behavior: "smooth", // Efecto suave como deslizar 
     });
   }, [pathname]); // Se activa cada vez que cambia la URL
 
-  return null; // No renderiza nada, es un componente fantasma
+  return null; 
 };
 
 export default ScrollToTop;

@@ -10,6 +10,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import AloeVeraTips from "./components/Tips/AloeVeraTips";
 import CocoTips from "./components/Tips/CocoTips";
 import ProductsPage from "./Pages/ProductsPage";
+import ProductDetailPage from "./components/Shop/ProductDetailPAge";
 
 function App() {
   useEffect(() => {
@@ -24,8 +25,8 @@ function App() {
           <Route path="blog/1" element={<TipsPage />} />
           <Route path="blog/2" element={<AloeVeraTips />} />
           <Route path="blog/3" element={<CocoTips />} />
-          <Route path="/productos" element={<ProductsPage/>} />
-          {/* <Route path="/Productos/:id" element={<ProductDetailPage} />*/}
+          <Route path="/productos" element={<ProductsPage />} />
+          <Route path="/producto/:id" element={<ProductDetailPage />} />
         </Route>
       </Routes>
     </CartProvider>

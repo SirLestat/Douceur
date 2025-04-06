@@ -3,10 +3,25 @@ import { LiaShoppingCartSolid } from "react-icons/lia";
 import { FiTrash2 } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import logo from "../../assets/hoja3.webp";
+import CheckoutAnimation from "./CheckoutAnimation";
+import { useState } from "react"; // Añadimos el hook useState
 
 const Navbar: React.FC = () => {
   const { cart, removeFromCart, adjustQuantity, totalItems, subtotal } =
     useCart();
+  
+  // Estado para manejar la visibilidad del menú móvil
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Función para manejar la apertura/cierre del menú móvil
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Función para cerrar el menú móvil al seleccionar una opción
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <nav className="navbar fixed top-0 w-full bg-white border-b-2 border-[#E6F2ED] text-[#5D534B] z-50 backdrop-blur-sm font-medium flex justify-between">
@@ -17,6 +32,7 @@ const Navbar: React.FC = () => {
             tabIndex={0}
             className="btn btn-ghost btn-circle"
             aria-label="menu"
+            onClick={toggleMenu} // Al hacer click, cambiamos el estado
           >
             <svg
               className="h-6 w-6"
@@ -32,15 +48,15 @@ const Navbar: React.FC = () => {
               />
             </svg>
           </button>
-          <ul className="dropdown-content menu menu-md mt-3 w-52 p-2 bg-white rounded-box shadow z">
+          <ul className={`dropdown-content menu menu-md mt-3 w-52 p-2 bg-white rounded-box shadow z ${isMenuOpen ? "block" : "hidden"}`}>
             <li>
-              <Link to="/">Inicio</Link>
+              <Link to="/" onClick={closeMenu}>Inicio</Link>
             </li>
             <li>
-              <Link to="/productos">Productos</Link>
+              <Link to="/productos" onClick={closeMenu}>Productos</Link>
             </li>
             <li>
-              <Link to="/blog/1">Blog</Link>
+              <Link to="/blog/1" onClick={closeMenu}>Blog</Link>
             </li>
           </ul>
         </div>
@@ -161,9 +177,9 @@ const Navbar: React.FC = () => {
                   ${subtotal} MXN
                 </span>
               </div>
-              <button className="btn2 w-full bg-[#2D6A4F] text-white hover:bg-[#245C45]">
-                Finalizar compra
-              </button>
+              <div className="flex justify-center">
+                <CheckoutAnimation />
+              </div>
             </div>
           )}
         </div>
