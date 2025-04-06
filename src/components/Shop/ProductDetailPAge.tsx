@@ -23,7 +23,7 @@ const ProductDetailPage: React.FC = () => {
         <img
           src={product.image}
           alt={product.name}
-          className="w-full md:w-1/2 rounded-xl shadow-md object-cover"
+          className="w-full md:w-2/6 rounded-3xl shadow-md object-cover"
         />
         <div className="md:w-1/2">
           <h2 className="text-3xl font-bold mb-4 text-[#2D6A4F]">
@@ -40,7 +40,7 @@ const ProductDetailPage: React.FC = () => {
           )}
           <button
             onClick={() => addToCart(product)}
-            className="bg-[#2D6A4F] hover:bg-[#245C45] text-white rounded-full w-full sm:w-auto py-2 px-6"
+            className="btn2 bg-[#2D6A4F] hover:bg-[#245C45] text-white rounded-full w-full sm:w-auto py-2 px-6"
           >
             Agregar al carrito
           </button>

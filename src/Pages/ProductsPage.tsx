@@ -19,8 +19,8 @@ const ProductsPage: React.FC = () => {
   return (
     <div
       className="container mx-auto px-4 py-6"
-      data-aos="fade-down"
-      data-aos-duration="1500"
+      data-aos="fade-left"
+      data-aos-duration="200"
     >
       <h1 className="text-3xl font-semibold text-center mb-6">
         Nuestros Productos

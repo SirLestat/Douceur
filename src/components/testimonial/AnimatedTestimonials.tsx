@@ -38,7 +38,7 @@ export const AnimatedTestimonials = ({
   }, [autoplay]);
 
   const randomRotateY = () => {
-    return Math.floor(Math.random() * 10) - 5;
+    return Math.floor(Math.random() * 10) - 10;
   };
 
   return (
@@ -49,7 +49,7 @@ export const AnimatedTestimonials = ({
       <div className="mx-auto max-w-full px-6  font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
         <div className="relative grid grid-cols-1 gap-16 md:grid-cols-2">
           <div>
-            <div className="relative h-80 w-full">
+            <div className="relative h-48 w-48 md:h-64 md:w-64 mx-auto">
               <AnimatePresence>
                 {testimonials.map((testimonial, index) => (
                   <motion.div
