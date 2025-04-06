@@ -33,7 +33,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
           <p className="text-[#5D534B] text-sm mb-2">{product.category}</p>
           <p className="text-[#5D534B] font-semibold">${product.price} MXN</p>
           {product.tooltip && (
-            <p className="text-sm text-[#5D534B] mt-2 italic">
+            <p className="text-sm text-[#5D534B] mt-2 ">
               {product.tooltip}
             </p>
           )}

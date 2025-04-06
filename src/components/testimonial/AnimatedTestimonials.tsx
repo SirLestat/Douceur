@@ -1,6 +1,7 @@
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { RiDoubleQuotesL } from "react-icons/ri";
 
 type Testimonial = {
   quote: string;
@@ -120,7 +121,8 @@ export const AnimatedTestimonials = ({
                 <p className="text-sm text-[#8A817C] ">
                   {testimonials[active].designation}
                 </p>
-                <motion.p className="mt-8 text-lg text-[#5D534B] max-h-20">
+                <motion.p className="mt-8 text-lg text-[#5D534B] max-h-20 italic">
+                  <RiDoubleQuotesL className="text-[#C76A53] absolute top-[65px]" />
                   {testimonials[active].quote.split(" ").map((word, index) => (
                     <motion.span
                       key={index}

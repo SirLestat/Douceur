@@ -4,21 +4,18 @@ import { FiTrash2 } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import logo from "../../assets/hoja3.webp";
 import CheckoutAnimation from "./CheckoutAnimation";
-import { useState } from "react"; // Añadimos el hook useState
+import { useState } from "react";
 
 const Navbar: React.FC = () => {
   const { cart, removeFromCart, adjustQuantity, totalItems, subtotal } =
     useCart();
-  
-  // Estado para manejar la visibilidad del menú móvil
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Función para manejar la apertura/cierre del menú móvil
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Función para cerrar el menú móvil al seleccionar una opción
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
@@ -32,7 +29,7 @@ const Navbar: React.FC = () => {
             tabIndex={0}
             className="btn btn-ghost btn-circle"
             aria-label="menu"
-            onClick={toggleMenu} // Al hacer click, cambiamos el estado
+            onClick={toggleMenu}
           >
             <svg
               className="h-6 w-6"
@@ -48,15 +45,25 @@ const Navbar: React.FC = () => {
               />
             </svg>
           </button>
-          <ul className={`dropdown-content menu menu-md mt-3 w-52 p-2 bg-white rounded-box shadow z ${isMenuOpen ? "block" : "hidden"}`}>
+          <ul
+            className={`dropdown-content menu menu-md mt-3 w-52 p-2 bg-white rounded-box shadow z ${
+              isMenuOpen ? "block" : "hidden"
+            }`}
+          >
             <li>
-              <Link to="/" onClick={closeMenu}>Inicio</Link>
+              <Link to="/" onClick={closeMenu}>
+                Inicio
+              </Link>
             </li>
             <li>
-              <Link to="/productos" onClick={closeMenu}>Productos</Link>
+              <Link to="/productos" onClick={closeMenu}>
+                Productos
+              </Link>
             </li>
             <li>
-              <Link to="/blog/1" onClick={closeMenu}>Blog</Link>
+              <Link to="/blog/1" onClick={closeMenu}>
+                Blog
+              </Link>
             </li>
           </ul>
         </div>
@@ -115,7 +122,17 @@ const Navbar: React.FC = () => {
 
       {/* Modal carrito */}
       <dialog id="cart_modal" className="modal">
-        <div className="modal-box max-w-md">
+        <div className="modal-box max-w-md relative">
+          {/* Botón cerrar extra */}
+          <form method="dialog">
+            <button
+              className="absolute right-4 top-4 text-[#5D534B] hover:text-[#2D6A4F] text-xl font-bold"
+              aria-label="Cerrar carrito"
+            >
+              ✕
+            </button>
+          </form>
+
           {cart.length === 0 ? (
             <div className="text-center p-4">
               <h3 className="font-bold text-lg">Carrito vacío</h3>
@@ -126,7 +143,7 @@ const Navbar: React.FC = () => {
               </p>
             </div>
           ) : (
-            <div>
+            <>
               <h3 className="font-bold text-lg">Tu selección</h3>
               <hr className="border-[#E6F2ED] mb-4" />
               {cart.map(({ product, quantity }) => (
@@ -148,10 +165,10 @@ const Navbar: React.FC = () => {
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="flex items-center bg-[#E6F2ED] rounded-full">
+                    <div className="flex items-center bg-[#ffffff] rounded-full border">
                       <button
                         onClick={() => adjustQuantity(product.id, -1)}
-                        className="px-3 py-1 hover:bg-[#2D6A4F] hover:text-white rounded-l-full"
+                        className="px-3 py-1 hover:bg-[#2D6A4F] hover:text-white rounded-l-full dorder "
                       >
                         -
                       </button>
@@ -180,11 +197,11 @@ const Navbar: React.FC = () => {
               <div className="flex justify-center">
                 <CheckoutAnimation />
               </div>
-            </div>
+            </>
           )}
         </div>
         <form method="dialog" className="modal-backdrop">
-          <button>Cerrar</button>
+          <button className="cursor-default"></button>
         </form>
       </dialog>
     </nav>

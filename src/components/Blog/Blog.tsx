@@ -9,9 +9,9 @@ const Blog = () => {
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-right md:bg-left bg-no-repeat z-[-1] "
         style={{
-          backgroundImage: "url('/blog/nature1.jpg')",
+          backgroundImage: "url('/blog/nature2.avif')",
           backgroundAttachment: "fixed",
-          opacity:"80%"
+          opacity: "80%",
         }}
         aria-hidden="true"
       ></div>
