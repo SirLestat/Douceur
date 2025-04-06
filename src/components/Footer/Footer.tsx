@@ -74,7 +74,7 @@ const Footer = () => {
       </footer>
 
       <div className="text-center mt-8 text-[#5D534B] text-sm border-t border-[#D1E7D6] pt-4 flex justify-center">
-        <p className="pb-4">
+        <p className="pb-0">
           © 2025 Douceur — All rights reserved <span className="mx-2">|</span>
           Designed & developed by
           <span className="mx-1">
