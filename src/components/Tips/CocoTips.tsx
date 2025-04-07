@@ -7,7 +7,8 @@ const CocoTips: React.FC = () => {
   return (
     <div
       className="container mx-auto px-6 py-8"
-     data-aos="fade-left" data-aos-duration="200"
+      data-aos="fade-left"
+      data-aos-duration="200"
     >
       <div className="mx-auto sm:mx-20 mt-4 lg:mt-16 text-[#5D534B] flex flex-col items-center">
         <img
@@ -92,7 +93,7 @@ const CocoTips: React.FC = () => {
           </p>
         </main>
       </div>
-      <NewsCarousel/>
+      <NewsCarousel />
     </div>
   );
 };

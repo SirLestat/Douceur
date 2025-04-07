@@ -3,6 +3,7 @@ import React from "react";
 import { LiaCartPlusSolid } from "react-icons/lia";
 import { useCart } from "../../context/CartContext";
 import { Product } from "./Products";
+import { Link } from "react-router-dom";
 
 interface CarouselProps {
   products: Product[];
@@ -13,12 +14,18 @@ const Carousel: React.FC<CarouselProps> = ({ products }) => {
 
   return (
     <div className="mt-4 md:px-0">
-      <div>
+      <div className="flex justify-between items-center">
         <p className="text-[#2D6A4F] font-bold text-2xl md:text-3xl pt-8 pb-4">
           Los más vendidos
         </p>
 
-        <button className="btn2 bg-[#2D6A4F]">todos los productos </button>
+        <div>
+          <Link to="/productos">
+            <button className="btn2 text-white bg-[#2D6A4F]">
+              todos los productos{" "}
+            </button>
+          </Link>
+        </div>
       </div>
 
       <hr className="text-[#2D6A4F] p-2" />
