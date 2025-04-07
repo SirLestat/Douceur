@@ -1,81 +1,99 @@
-import React from "react";
+import logo from "../../assets/hoja3.webp";
 
-interface ButtonConfig {
-  label: string;
-  onClick: () => void;
-  category: string | null;
-}
-
-interface HorizontalScrollProps {
-  buttons: ButtonConfig[];
-  selectedCategory: string | null;
-}
-
-const HorizontalScroll: React.FC<HorizontalScrollProps> = ({
-  buttons,
-  selectedCategory,
-}) => {
+const Footer = () => {
   return (
-    <div>
-      <p className="text-[#2D6A4F] font-bold text-2xl md:text-3xl pt-8 pb-4">
-        Los más vendidos
-      </p>
-      <hr className="bg-[#52B788] w-full h-[1px] mb-4" />
-
-      <nav className="hide-scrollbar" role="tablist">
-        <div className="inline-flex gap-3 md:gap-4 min-w-max">
-          {buttons.map((button, index) => {
-            const id = `tab-${button.category || "all"}`;
-            const panelId = `tabpanel-${button.category || "all"}`;
-            const isSelected = selectedCategory === button.category;
-
-            return (
-              <button
-                key={index}
-                id={id}
-                onClick={button.onClick}
-                role="tab"
-                aria-selected={isSelected}
-                aria-controls={panelId}
-                aria-label={button.label}
-                className={`
-                  text-sm md:text-base px-4 py-2 rounded-full font-semibold transition-all duration-300 transform 
-                  focus:-translate-y-1.5 focus:bg-[#2D6A4F]
-                  ${
-                    isSelected
-                      ? "bg-[#2D6A4F] text-white"
-                      : "bg-[#FFFFFF] text-[#5D534B] hover:bg-[#2D6A4F] border border-[#E9ECEF] hover:text-white"
-                  }
-                `}
-              >
-                {button.label}
-              </button>
-            );
-          })}
+    <div className="pt-16  px-6  container mx-auto">
+      <footer className="footer bg-[#F2F7F2] p-10 rounded-3xl grid grid-cols-2 md:flex md:justify-around">
+        <div className="col-span-2 flex items-center flex-col md:items-start">
+          <img
+            src={logo}
+            alt="Logo hoja verde"
+            className="w-[4vh] h-[4vh]"
+            loading="lazy"
+          />
+          <p className="text-[#2D6A4F] text-3xl font-bold">Douceur</p>
+          <p className="text-[#5D534B] mt-2 md:text-left font-normal">
+            Douceur Industries Ltd. Providing reliable tech since 1992
+          </p>
         </div>
-      </nav>
 
-      
-      {buttons.map((button, index) => {
-        const id = `tab-${button.category || "all"}`;
-        const panelId = `tabpanel-${button.category || "all"}`;
-        const isSelected = selectedCategory === button.category;
+        <nav>
+          <h3 className="footer-title text-[#2D6A4F]">Services</h3>
+          <p className=" text-[#5D534B] hover:text-[#2E6B34]">Branding</p>
+          <p className=" text-[#5D534B] hover:text-[#2E6B34]">Design</p>
+          <p className=" text-[#5D534B] hover:text-[#2E6B34]">Marketing</p>
+          <p className=" text-[#5D534B] hover:text-[#2E6B34]">Advertisement</p>
+        </nav>
 
-        return (
-          <div
-            key={index}
-            id={panelId}
-            role="tabpanel"
-            aria-labelledby={id}
-            hidden={!isSelected}
-          >
-            
-            <span className="sr-only">Contenido de {button.label}</span>
+        <nav>
+          <h3 className="footer-title text-[#2D6A4F]">Company</h3>
+          <p className=" text-[#5D534B] hover:text-[#2E6B34]">About us</p>
+          <p className=" text-[#5D534B] hover:text-[#2E6B34]">Contact</p>
+          <p className=" text-[#5D534B] hover:text-[#2E6B34]">Jobs</p>
+          <p className=" text-[#5D534B] hover:text-[#2E6B34]">Press kit</p>
+        </nav>
+
+        <nav>
+          <h3 className="footer-title text-[#2D6A4F]">Social</h3>
+          <div className="grid grid-flow-col gap-4">
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                className="fill-[#2D6A4F] hover:fill-[#3D8B43] cursor-pointer transition-colors"
+              >
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+              </svg>
+            </p>
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                className="fill-[#2E6B34] hover:fill-[#3D8B43] cursor-pointer transition-colors"
+              >
+                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+              </svg>
+            </p>
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                className="fill-[#2E6B34] hover:fill-[#3D8B43] cursor-pointer transition-colors"
+              >
+                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+              </svg>
+            </p>
           </div>
-        );
-      })}
+        </nav>
+      </footer>
+
+      <div className="text-center mt-8 text-[#5D534B] text-sm border-t border-[#D1E7D6] pt-4 flex justify-center">
+        <p className="pb-0">
+          © 2025 Douceur — All rights reserved <span className="mx-2">|</span>
+          Designed & developed by
+          <span className="mx-1">
+            <a
+              className="underline flex justify-center "
+              href="https://portfolio-alejandro-santiago.vercel.app/"
+            >
+              <img
+                src="/dev.png"
+                alt="logo de desarrollador"
+                width={260}
+                height={160}
+              />
+            </a>
+          </span>
+        </p>
+      </div>
     </div>
   );
 };
 
-export default HorizontalScroll;
+export default Footer;

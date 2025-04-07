@@ -1,7 +1,7 @@
 
 import { useState, useMemo } from "react";
 import { products } from "./Products";
-import HorizontalScroll from "./HorizontalScroll";
+
 import Carousel from "./Carousel";
 
 const ProductCarousel = () => {
@@ -40,7 +40,7 @@ const ProductCarousel = () => {
       data-aos-offset={aosOffset}
     >
       <div className="container mx-auto px-6">
-        <HorizontalScroll buttons={buttons} selectedCategory={selectedCategory} />
+        
         <Carousel products={filteredProducts} />
       </div>
     </div>

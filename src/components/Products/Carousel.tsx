@@ -13,6 +13,15 @@ const Carousel: React.FC<CarouselProps> = ({ products }) => {
 
   return (
     <div className="mt-4 md:px-0">
+      <div>
+        <p className="text-[#2D6A4F] font-bold text-2xl md:text-3xl pt-8 pb-4">
+          Los más vendidos
+        </p>
+
+        <button className="btn2 bg-[#2D6A4F]">todos los productos </button>
+      </div>
+
+      <hr className="text-[#2D6A4F] p-2" />
       <div className="carousel carousel-center rounded-box max-w-full space-x-4">
         {products.map((product) => (
           <div key={product.id} className="carousel-item flex flex-col">
