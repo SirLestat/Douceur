@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
             ))}
           </ul>
           <button
-            className="btn2 rounded-full w-full bg-[#E07A5F] text-white my-4 text-xl sm:max-w-[30vh] hover:bg-[#C76A53] focus:outline-none focus:ring-2 focus:ring-[#C76A53] focus:ring-offset-2 transition-colors duration-200"
+            className="btn2 rounded-full w-full bg-[#D35400] text-white my-4 text-xl sm:max-w-[30vh] hover:bg-[#BA4A00] focus:outline-none focus:ring-2 focus:ring-[#BA4A00] focus:ring-offset-2 transition-colors duration-200"
             onClick={scrollToProducts}
             aria-label="Explora nuestra colección de productos naturales"
           >
