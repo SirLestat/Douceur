@@ -14,21 +14,13 @@ const Carousel: React.FC<CarouselProps> = ({ products }) => {
 
   return (
     <div className="mt-4 md:px-0">
-      <div className="flex justify-between items-center">
-        <p className="text-[#2D6A4F] font-bold text-2xl md:text-3xl pt-8 pb-4">
+      <div className="md:flex-row flex flex-col   ">
+        <p className="text-[#2D6A4F] font-bold text-2xl md:text-3xl ">
           Los más vendidos
         </p>
-
-        <div>
-          <Link to="/productos">
-            <button className="btn2 text-white bg-[#2D6A4F]">
-              todos los productos{" "}
-            </button>
-          </Link>
-        </div>
       </div>
 
-      <hr className="text-[#2D6A4F] p-2" />
+      <hr className="text-[#2D6A4F] mt-4 mb-4" />
       <div className="carousel carousel-center rounded-box max-w-full space-x-4">
         {products.map((product) => (
           <div key={product.id} className="carousel-item flex flex-col">
@@ -54,6 +46,13 @@ const Carousel: React.FC<CarouselProps> = ({ products }) => {
             <p className="text-sm text-[#1B4332] pb-4">$ {product.price} MXN</p>
           </div>
         ))}
+      </div>
+      <div className="py-4">
+        <Link to="/productos">
+          <button className="btn2 text-white bg-[#2D6A4F] px-4 font-medium">
+            Ver todos los productos
+          </button>
+        </Link>
       </div>
     </div>
   );
